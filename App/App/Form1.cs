@@ -16,5 +16,11 @@ namespace App
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SQL.SQLConnector conexion = new SQL.SQLConnector();
+            conexion.Connection();
+        }
     }
 }
