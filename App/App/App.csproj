@@ -53,7 +53,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="modelo\ListaMercancia.cs" />
+    <Compile Include="modelo\ListaRuta.cs" />
     <Compile Include="modelo\Mercancia.cs" />
+    <Compile Include="modelo\Ruta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
