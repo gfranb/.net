@@ -12,20 +12,18 @@ namespace WindowsFormsApp1.modelo {
         private string origen_ruta;
         private string destino_ruta;
         private bool repostar_gasolina;
-        private string gasolinera;
         private DateTime fecha_ruta;
         private DateTime duracion_ruta;
         private float precio_repostaje;
         private float kms_ruta;
 
-        Ruta(string id_ruta, string origen_ruta, string destino_ruta, bool repostar_gasolina, string gasolinera, DateTime fecha_ruta,
+        Ruta(string id_ruta, string origen_ruta, string destino_ruta, bool repostar_gasolina, DateTime fecha_ruta,
             DateTime duracion_ruta, float precio_repostaje, float kms_ruta)
         {
             this.id_ruta = id_ruta;
             this.origen_ruta = origen_ruta;
             this.destino_ruta = destino_ruta;
             this.repostar_gasolina = repostar_gasolina;
-            this.gasolinera = gasolinera;
             this.fecha_ruta = fecha_ruta;
             this.duracion_ruta = duracion_ruta;
             this.precio_repostaje = precio_repostaje;
@@ -55,10 +53,7 @@ namespace WindowsFormsApp1.modelo {
         {
             this.repostar_gasolina = repostar;
         }
-        public void set_gasolinera(string gasolinera)
-        {
-            this.gasolinera = gasolinera;
-        }
+
         public void set_fecha_ruta(DateTime fecha_hora)
         {
             this.fecha_ruta = fecha_hora;
@@ -97,11 +92,6 @@ namespace WindowsFormsApp1.modelo {
             return this.repostar_gasolina;
         }
 
-        public string get_gasolinera()
-        {
-            return this.gasolinera;
-        }
-
         public DateTime get_fecha_ruta()
         {
             return this.fecha_ruta;
@@ -121,6 +111,20 @@ namespace WindowsFormsApp1.modelo {
         {
             return this.kms_ruta;
         }
+
+        public override string ToString()
+        {
+            return "La ruta con id" + id_ruta
+                + "empieza en" + origen_ruta
+                + "y su destino es" + destino_ruta
+                + ". Punto de repostaje: " + repostar_gasolina
+                + ". Precio repostaje: " + precio_repostaje
+                + ". Fecha de ruta: " + fecha_ruta
+                + ". Duración estimada de ruta: " + duracion_ruta
+                + "Kilómetros totales de la ruta: " + kms_ruta
+                + ".";
+        }
+
     }
 }
 
