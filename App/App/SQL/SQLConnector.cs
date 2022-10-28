@@ -33,5 +33,41 @@ namespace App.SQL
             }
             return connection;
         }
+        public void CreateTable()
+        {
+
+            string createTableStatementMercancia = "CREATE TABLE Mercancia(id_mercancia varchar(10) PRIMARY KEY, nombre VARCHAR(10), volumenProducto FLOAT)";
+            string createTableStatementVehiculo = ""; //Llenar con query SQL
+            string createTableStatementConductor = ""; //Llenar con query SQL
+            string createTableStatementRuta = ""; //Llenar con query SQL
+
+            try
+            {
+
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                SqlCommand cmd;
+                cmd = new SqlCommand(createTableStatementMercancia, connection);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand(createTableStatementVehiculo, connection);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand(createTableStatementConductor, connection);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand(createTableStatementRuta, connection);
+                cmd.ExecuteNonQuery();
+                //MessageBox.Show("Tabla Mercancia creada");
+
+            }
+            catch(Exception e)
+            {
+                //MessageBox.Show(e.Message);
+            }
+
+        }
+
     }
+
+    
 }
