@@ -11,22 +11,19 @@ namespace WindowsFormsApp1.modelo
         private string id_conductor;
         private string nombre;
         private string apellidos;
-        private DateTime fechaNacimiento;
         private string domicilio;
         private string permisoConducir;
         private Boolean disponibilidad;
-        private id_pedido pedido;
+       
 
-        Conductor(string id_conductor, string nombre, string apellidos, DateTime fechaNacimiento, string domicilio, string permisoConducir, Boolean disponibilidad, id_pedido pedido)
+        Conductor(string id_conductor, string nombre, string apellidos,  string domicilio, string permisoConducir, Boolean disponibilidad)
         {
             this.id_conductor = id_conductor;
             this.nombre = nombre;
             this.apellidos = apellidos;
-            this.fechaNacimiento = fechaNacimiento;
             this.domicilio = domicilio;
             this.permisoConducir = permisoConducir;
             this.disponibilidad = disponibilidad;
-            this.pedido = pedido;
         }
 
         Conductor()
@@ -49,10 +46,7 @@ namespace WindowsFormsApp1.modelo
             this.apellidos = apellidos;
 
         }
-        public void set_fechaNacimiento(DateTime fechaNacimiento)
-        {
-            this.fechaNacimiento = fechaNacimiento;
-        }
+        
         public void set_domicilio(string domicilio)
         {
             this.domicilio = domicilio;
@@ -64,10 +58,6 @@ namespace WindowsFormsApp1.modelo
         public void set_disponibilidad(Boolean disponibilidad)
         {
             this.disponibilidad = disponibilidad;
-        }
-        public void Set_id_pedido(id_pedido pedido)
-        {
-            this.id_pedido = pedido;
         }
 
         public string get_id_conductor()
@@ -84,11 +74,7 @@ namespace WindowsFormsApp1.modelo
         {
             return this.apellidos;
         }
-        public string get_fechaNacimiento()
-        {
-            return this.fechaNacimiento;
-        }
-
+        
         public string get_domicilio()
         {
             return this.domicilio;
@@ -98,16 +84,8 @@ namespace WindowsFormsApp1.modelo
         {
             return this.permisoConducir;
         }
-        public string get_disponibilidad()
-        {
-            return this.disponibilidad;
-        }
-        public string get_pedido()
-        {
-            return this.pedido;
-        }
-
+        
 
     }
 }
-}
+

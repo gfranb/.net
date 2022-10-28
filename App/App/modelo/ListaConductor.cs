@@ -8,10 +8,10 @@ namespace WindowsFormsApp1.modelo
 {
     internal class ListaConductor
     {
-        {
+        
         private List<Conductor> listConductor;
 
-        ListaConductor(List<Conductor> listConductor
+        ListaConductor(List<Conductor> listConductor)
         {
             this.listConductor = listConductor;
         }
@@ -33,4 +33,4 @@ namespace WindowsFormsApp1.modelo
 
     }
 }
-}
+
