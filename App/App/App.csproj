@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="modelo\ListaMercancia.cs" />
     <Compile Include="modelo\Mercancia.cs" />
+    <Compile Include="modelo\Vehiculo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQL\SQLConnector.cs" />
