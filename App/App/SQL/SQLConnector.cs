@@ -41,6 +41,7 @@ namespace App.SQL
             string createTableStatementConductor = "CREATE TABLE Conductor(id_conductor varchar(10) PRIMARY KEY, nombre VARCHAR(10), apellidos VARCHAR(20), domicilio VARCHAR(15), permisoConducir VARCHAR(10), disponibilidad BOOLEAN)"; 
             string createTableStatementRuta = "CREATE TABLE Ruta(id_ruta varchar(10) PRIMARY KEY, origen_ruta VARCHAR(10), destino_ruta VARCHAR(10), repostar_gasolina BOOLEAN, fecha_ruta DATETIME, duracion_ruta DATETIME, precio_repostaje FLOAT, kms_ruta FLOAT)";
             //comentario para poder hacer un puto commit
+            //dios
             try
             {
 
