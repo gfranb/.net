@@ -52,10 +52,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelo\Conductor.cs" />
+    <Compile Include="modelo\ListaConductor.cs" />
     <Compile Include="modelo\ListaMercancia.cs" />
+    <Compile Include="modelo\ListaRuta.cs" />
     <Compile Include="modelo\Mercancia.cs" />
+    <Compile Include="modelo\Ruta.cs" />
+    <Compile Include="modelo\Vehiculo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\SQLConnector.cs" />
+    <Compile Include="SQL\SQL_Mercancia.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
