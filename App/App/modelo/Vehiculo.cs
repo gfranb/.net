@@ -93,7 +93,10 @@ namespace App.modelo
         {
             return this.estado;
         }
+        public override string ToString()
+        {
+            return "El vehiculo con Id: " + getId_vehiculo() + ", " + "es de la marca " + getMarca() + ", " + "es de tipo " + getTipoVehiculo() + ". ";
+        }
     }
-
-
+   
 }
