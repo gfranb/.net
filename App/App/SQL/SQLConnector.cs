@@ -37,9 +37,9 @@ namespace App.SQL
         {
 
             string createTableStatementMercancia = "CREATE TABLE Mercancia(id_mercancia varchar(10) PRIMARY KEY, nombre VARCHAR(10), volumenProducto FLOAT)";
-            string createTableStatementVehiculo = ""; //Llenar con query SQL
-            string createTableStatementConductor = ""; //Llenar con query SQL
-            string createTableStatementRuta = ""; //Llenar con query SQL
+            string createTableStatementVehiculo = "CREATE TABLE Vehiculo(id_vehiculo varchar(10) PRIMARY KEY, marca VARCHAR(10), tipoVehiculo VARCHAR(10), disponibilidadVehiculo BOOLEAN, volumenGasolina DOUBLE(500,500), estado BOOLEAN)";
+            string createTableStatementConductor = "CREATE TABLE Conductor(id_conductor varchar(10) PRIMARY KEY, nombre VARCHAR(10), apellidos VARCHAR(20), domicilio VARCHAR(15), permisoConducir VARCHAR(10), disponibilidad BOOLEAN)"; 
+            string createTableStatementRuta = "CREATE TABLE Ruta(id_ruta varchar(10) PRIMARY KEY, origen_ruta VARCHAR(10), destino_ruta VARCHAR(10), repostar_gasolina BOOLEAN, fecha_ruta DATETIME, duracion_ruta DATETIME, precio_repostaje FLOAT, kms_ruta FLOAT)";
 
             try
             {
@@ -66,6 +66,8 @@ namespace App.SQL
             }
 
         }
+
+
 
     }
 
