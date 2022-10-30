@@ -37,11 +37,9 @@ namespace App.SQL
         {
 
             string createTableStatementMercancia = "CREATE TABLE Mercancia(id_mercancia varchar(10) PRIMARY KEY, nombre VARCHAR(10), volumenProducto FLOAT)";
-            string createTableStatementVehiculo = "CREATE TABLE Vehiculo(id_vehiculo varchar(10) PRIMARY KEY, marca VARCHAR(10), tipoVehiculo VARCHAR(10), disponibilidadVehiculo BOOLEAN, volumenGasolina DOUBLE(500,500), estado BOOLEAN)";
-            string createTableStatementConductor = "CREATE TABLE Conductor(id_conductor varchar(10) PRIMARY KEY, nombre VARCHAR(10), apellidos VARCHAR(20), domicilio VARCHAR(15), permisoConducir VARCHAR(10), disponibilidad BOOLEAN)"; 
-            string createTableStatementRuta = "CREATE TABLE Ruta(id_ruta varchar(10) PRIMARY KEY, origen_ruta VARCHAR(10), destino_ruta VARCHAR(10), repostar_gasolina BOOLEAN, fecha_ruta DATETIME, duracion_ruta DATETIME, precio_repostaje FLOAT, kms_ruta FLOAT)";
-            //comentario para poder hacer un puto commit
-            //dios
+            string createTableStatementVehiculo = "CREATE TABLE Vehiculo(id_vehiculo varchar(10) PRIMARY KEY, marca VARCHAR(10), tipoVehiculo VARCHAR(10), disponibilidadVehiculo BIT, volumenGasolina FLOAT, estado BIT)";
+            string createTableStatementConductor = "CREATE TABLE Conductor(id_conductor VARCHAR(10) PRIMARY KEY, nombre VARCHAR(10), apellidos VARCHAR(20), domicilio VARCHAR(15), permisoConducir VARCHAR(10), disponibilidad BIT)"; 
+            string createTableStatementRuta = "CREATE TABLE Ruta(id_ruta varchar(10) PRIMARY KEY, origen_ruta VARCHAR(10), destino_ruta VARCHAR(10), repostar_gasolina BIT, fecha_ruta DATE, duracion_ruta DATE, precio_repostaje FLOAT, kms_ruta FLOAT)";
             try
             {
 
@@ -58,17 +56,17 @@ namespace App.SQL
                 cmd.ExecuteNonQuery();
                 cmd = new SqlCommand(createTableStatementRuta, connection);
                 cmd.ExecuteNonQuery();
-                //MessageBox.Show("Tabla Mercancia creada");
+                MessageBox.Show("Tabla Mercancia creada");
 
             }
             catch(Exception e)
             {
-                //MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
             }
 
         }
 
     }
 
-    
+
 }
