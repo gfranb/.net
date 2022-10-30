@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.SQL;
 
 namespace App
 {
@@ -20,9 +21,22 @@ namespace App
         private void button1_Click(object sender, EventArgs e)
         {
 
+            /*SQLConnector conn = new SQLConnector();
+            conn.Entity();*/
+          
             SQL.SQLConnector conexion = new SQL.SQLConnector();
             conexion.Connection();
             conexion.CreateTable();
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -79,10 +79,42 @@
     <Compile Include="modelo\Mercancia.cs" />
     <Compile Include="modelo\Ruta.cs" />
     <Compile Include="modelo\Vehiculo.cs" />
+    <Compile Include="netAssistantsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\Conductor.cs">
+      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\Mercancia.cs">
+      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\netAssistantsDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>netAssistantsDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\netAssistantsDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\netAssistantsDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\Ruta.cs">
+      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="SQL\SQLConnector.cs" />
     <Compile Include="SQL\SQL_Mercancia.cs" />
+    <Compile Include="SQL\Vehiculo.cs">
+      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,12 +127,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+=======
+    <None Include="netAssistantsDataSet.xsc">
+      <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="netAssistantsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>netAssistantsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="netAssistantsDataSet.xss">
+      <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
+>>>>>>> produccion
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -112,11 +157,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SQL\netAssistantsDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>netAssistantsDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SQL\netAssistantsDB.edmx.diagram">
+      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -125,5 +178,24 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+=======
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controlador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\netAssistantsDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
+      <LastGenOutput>netAssistantsDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SQL\netAssistantsDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
+      <LastGenOutput>netAssistantsDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+>>>>>>> produccion
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

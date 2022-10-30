@@ -10,6 +10,21 @@ namespace App.SQL
 {
     internal class SQLConnector
     {
+
+        /*public void Entity()
+        {
+            using (netAssistantsEntities db = new netAssistantsEntities())
+            {
+                var lst = db.Conductors;
+
+                foreach (var oConductor in lst)
+                {
+
+                }
+            }
+            
+        }*/
+
         SqlConnection connection = new SqlConnection();
 
         static string servidor = "localhost";
@@ -66,8 +81,5 @@ namespace App.SQL
             }
 
         }
-
     }
-
-
 }
