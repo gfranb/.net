@@ -13,10 +13,14 @@ namespace App.SQL
     [XmlRootAttribute("Mercancia", IsNullable = false)]
     public partial class Mercancia
     {
+<<<<<<< HEAD
         [Key]
         public string id_mercancia { get; set; }
         [Column("nombre")]
         [StringLength(10)]
+=======
+        public int id_producto { get; set; }
+>>>>>>> produccion
         public string nombre { get; set; }
         [Column("volumenProducto")]
         public Nullable<double> volumenProducto { get; set; }

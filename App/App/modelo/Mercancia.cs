@@ -8,11 +8,11 @@ namespace WindowsFormsApp1.modelo
 {
     internal class Mercancia
     {
-        private string id_mercancia;
-        private float volumenProducto;
+        private int id_mercancia;
+        private double volumenProducto;
         private string nombre;
 
-        Mercancia(string id_mercancia, float volumenProducto, string nombre)
+        Mercancia(int id_mercancia, double volumenProducto, string nombre)
         {
             this.id_mercancia = id_mercancia;
             this.volumenProducto = volumenProducto;
@@ -24,12 +24,12 @@ namespace WindowsFormsApp1.modelo
 
         }
 
-        public void set_id_mercancia(string id)
+        public void set_id_mercancia(int id)
         {
             this.id_mercancia = id;
         }
 
-        public void set_volumenProducto(float volumen)
+        public void set_volumenProducto(double volumen)
         {
             this.volumenProducto = volumen;
         }
@@ -44,15 +44,16 @@ namespace WindowsFormsApp1.modelo
             return this.nombre;
         }
 
-        public string get_id_mercancia()
+        public int get_id_mercancia()
         {
             return this.id_mercancia;
         }
 
-        public string get_volumenProducto()
+        public double get_volumenProducto()
         {
-            return this.nombre;
+            return this.volumenProducto;
         }
+      
 
     }
 }

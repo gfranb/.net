@@ -21,12 +21,8 @@ namespace App
         private void button1_Click(object sender, EventArgs e)
         {
 
-            /*SQLConnector conn = new SQLConnector();
-            conn.Entity();*/
-          
-            SQL.SQLConnector conexion = new SQL.SQLConnector();
-            conexion.Connection();
-            conexion.CreateTable();
+            SQLConnector conexionBD = new SQLConnector();
+            conexionBD.showValuesGrid(dataGridView1);
 
         }
 
@@ -39,5 +35,23 @@ namespace App
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SQLConnector conexionBD = new SQLConnector();
+            conexionBD.importDataXML();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SQLConnector conexionBD = new SQLConnector();
+            conexionBD.exportDataXML();
+        }
+
     }
 }

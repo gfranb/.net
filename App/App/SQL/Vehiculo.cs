@@ -12,11 +12,15 @@ namespace App.SQL
     [XmlRootAttribute("Vehiculo", IsNullable = false)]
     public partial class Vehiculo
     {
+<<<<<<< HEAD
         [Key]
         [Column("id_vehiculo")]
         public int id_vehiculo { get; set; }
         [Column("marca")]
         [StringLength(10)]
+=======
+        public int id_vehiculo { get; set; }
+>>>>>>> produccion
         public string marca { get; set; }
         [Column("tipoVehiculo")]
         [StringLength(10)]
