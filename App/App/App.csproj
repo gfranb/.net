@@ -127,14 +127,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-=======
+
     <None Include="netAssistantsDataSet.xsc">
       <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
     </None>
@@ -145,7 +138,7 @@
     </None>
     <None Include="netAssistantsDataSet.xss">
       <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
->>>>>>> produccion
+
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -169,16 +162,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-=======
+
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +180,6 @@
       <LastGenOutput>netAssistantsDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
->>>>>>> produccion
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
