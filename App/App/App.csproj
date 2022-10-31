@@ -76,33 +76,33 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQL\Conductor.cs">
-      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+      <DependentUpon>net.tt</DependentUpon>
     </Compile>
     <Compile Include="SQL\Mercancia.cs">
-      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+      <DependentUpon>net.tt</DependentUpon>
     </Compile>
-    <Compile Include="SQL\netAssistantsDB.Context.cs">
+    <Compile Include="SQL\net.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>netAssistantsDB.Context.tt</DependentUpon>
+      <DependentUpon>net.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="SQL\netAssistantsDB.cs">
+    <Compile Include="SQL\net.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+      <DependentUpon>net.tt</DependentUpon>
     </Compile>
-    <Compile Include="SQL\netAssistantsDB.Designer.cs">
+    <Compile Include="SQL\net.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
+      <DependentUpon>net.edmx</DependentUpon>
     </Compile>
     <Compile Include="SQL\Ruta.cs">
-      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+      <DependentUpon>net.tt</DependentUpon>
     </Compile>
     <Compile Include="SQL\SQLConnector.cs" />
     <Compile Include="SQL\SQL_Mercancia.cs" />
     <Compile Include="SQL\Vehiculo.cs">
-      <DependentUpon>netAssistantsDB.tt</DependentUpon>
+      <DependentUpon>net.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -137,12 +137,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="SQL\netAssistantsDB.edmx">
+    <EntityDeploy Include="SQL\net.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>netAssistantsDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>net.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="SQL\netAssistantsDB.edmx.diagram">
-      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
+    <None Include="SQL\net.edmx.diagram">
+      <DependentUpon>net.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -155,15 +155,15 @@
     <Folder Include="controlador\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL\netAssistantsDB.Context.tt">
+    <Content Include="SQL\net.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
-      <LastGenOutput>netAssistantsDB.Context.cs</LastGenOutput>
+      <DependentUpon>net.edmx</DependentUpon>
+      <LastGenOutput>net.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="SQL\netAssistantsDB.tt">
+    <Content Include="SQL\net.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>netAssistantsDB.edmx</DependentUpon>
-      <LastGenOutput>netAssistantsDB.cs</LastGenOutput>
+      <DependentUpon>net.edmx</DependentUpon>
+      <LastGenOutput>net.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

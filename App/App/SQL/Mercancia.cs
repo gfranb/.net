@@ -14,7 +14,7 @@ namespace App.SQL
     
     public partial class Mercancia
     {
-        public string id_mercancia { get; set; }
+        public int id_producto { get; set; }
         public string nombre { get; set; }
         public Nullable<double> volumenProducto { get; set; }
     }

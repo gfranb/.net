@@ -14,7 +14,7 @@ namespace App.SQL
     
     public partial class Vehiculo
     {
-        public string id_vehiculo { get; set; }
+        public int id_vehiculo { get; set; }
         public string marca { get; set; }
         public string tipoVehiculo { get; set; }
         public Nullable<bool> disponibilidadVehiculo { get; set; }

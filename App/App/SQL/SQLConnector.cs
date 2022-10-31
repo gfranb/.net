@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
+using WindowsFormsApp1.modelo;
 
 namespace App.SQL
 {
@@ -17,7 +18,7 @@ namespace App.SQL
         {
             using (netAssistantsEntities db = new netAssistantsEntities())
             {
-                dataGridView1.DataSource = db.Conductors.ToList();
+                dataGridView1.DataSource = db.Mercancia.ToList();
             }
         }
 
@@ -25,9 +26,10 @@ namespace App.SQL
         {
             using (netAssistantsEntities db = new netAssistantsEntities())
             {
-
-                XElement DBtoXML = new XElement("Lista",
-                    (from tbl in db.Conductors
+                try
+                {
+                    XElement DBtoXML = new XElement("Lista",
+                    (from tbl in db.Conductor
                      select new
                      {
                          tbl.id_conductor,
@@ -44,40 +46,86 @@ namespace App.SQL
                                              new XElement("permiso", x.permiso),
                                              new XElement("disponibilidad", x.disponibilidad)
                                              )));
-                FileStream xmlFile = File.OpenWrite(@"conductores.xml");
-                byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
-                xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
-                xmlFile.Close();
-            }
+                    FileStream xmlFile = File.OpenWrite(@"conductores.xml");
+                    byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
+                    xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
+                    xmlFile.Close();
+                    MessageBox.Show("El XML se ha generado correctamente");
 
-            /*using (netAssistantsDB db = new netAssistantsDB())
-                
-            {
-                DataTable dt = new DataTable();
-                dt.TableName = "Conductor";
-                Conductor c = new Conductor();
-                c.GetType().GetProperties().ToList().ForEach(_c =>
-                {
-                    _c.GetValue(c, null);
-                    dt.Columns.Add(_c.Name, Nullable.GetUnderlyingType(_c.PropertyType) ?? _c.PropertyType);
-                });
-
-                foreach(var conductor in db.Conductors)
-                {
-                    dt.Rows.Add(conductor.id_conductor,conductor.nombre,conductor.apellidos,conductor.domicilio,conductor.permiso,conductor.disponibilidad);
                 }
-                DataSet ds = new DataSet();
-                ds.Tables.Add(dt);
-                ds.WriteXml(File.OpenWrite(@"conductores.XML"));
-                MessageBox.Show("XML de conductor generado");
-            }*/
+                catch (Exception error)
+                {
 
+                    MessageBox.Show("Error al cargar el XML " + error.Message);
+
+                }
+
+                using (netAssistantsEntities _db = new netAssistantsEntities())
+                {
+                    try
+                    {
+                        XElement DBtoXML = new XElement("Lista",
+                        (from tbl in _db.Mercancia
+                         select new
+                         {
+                             tbl.id_producto,
+                             tbl.nombre,
+                             tbl.volumenProducto,
+
+                         }).ToList().Select(x => new XElement("Mercancia",
+                                                 new XElement("id_producto", x.id_producto),
+                                                 new XElement("nombre", x.nombre),
+                                                 new XElement("volumenProducto", x.volumenProducto)
+                                                 )));
+                        FileStream xmlFile = File.OpenWrite(@"mercancias.xml");
+                        byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
+                        xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
+                        xmlFile.Close();
+                        MessageBox.Show("El XML se ha generado correctamente");
+
+                    }
+                    catch (Exception error)
+                    {
+
+                        MessageBox.Show("Error al cargar el XML " + error.Message);
+
+                    }
+
+                }
+
+                /*using (netAssistantsDB db = new netAssistantsDB())
+
+                {
+                    DataTable dt = new DataTable();
+                    dt.TableName = "Conductor";
+                    Conductor c = new Conductor();
+                    c.GetType().GetProperties().ToList().ForEach(_c =>
+                    {
+                        _c.GetValue(c, null);
+                        dt.Columns.Add(_c.Name, Nullable.GetUnderlyingType(_c.PropertyType) ?? _c.PropertyType);
+                    });
+
+                    foreach(var conductor in db.Conductors)
+                    {
+                        dt.Rows.Add(conductor.id_conductor,conductor.nombre,conductor.apellidos,conductor.domicilio,conductor.permiso,conductor.disponibilidad);
+                    }
+                    DataSet ds = new DataSet();
+                    ds.Tables.Add(dt);
+                    ds.WriteXml(File.OpenWrite(@"conductores.XML"));
+                    MessageBox.Show("XML de conductor generado");
+                }*/
+
+            }
         }
 
         public void importDataXML()
         {
             XDocument xDoc = XDocument.Load(@"conductores.xml");
-            List<Conductor> conductores = xDoc.Descendants("Conductor").Select
+
+            try
+            {
+
+                List<Conductor> conductores = xDoc.Descendants("Conductor").Select
                 (conductor =>
                 new Conductor
                 {
@@ -89,31 +137,78 @@ namespace App.SQL
                     disponibilidad = bool.Parse(conductor.Element("disponibilidad").Value)
                 }
                 ).ToList();
-            using (netAssistantsEntities db = new netAssistantsEntities())
-            {
-                foreach (var i in conductores)
+
+                using (netAssistantsEntities db = new netAssistantsEntities())
                 {
-                    var v = db.Conductors.Where(a => a.id_conductor.Equals(i.id_conductor)).FirstOrDefault();
-                    if (v != null)
+                    foreach (var i in conductores)
                     {
-                        v.id_conductor = i.id_conductor;
-                        v.nombre = i.nombre;
-                        v.apellidos = i.apellidos;
-                        v.domicilio = i.domicilio;
-                        v.permiso = i.permiso;
-                        v.disponibilidad = (bool)i.disponibilidad;
-                        MessageBox.Show("El Conductor " + v.id_conductor + " esta duplicado");
+                        var v = db.Conductor.Where(a => a.id_conductor.Equals(i.id_conductor)).FirstOrDefault();
+                        if (v != null)
+                        {
+                            v.id_conductor = i.id_conductor;
+                            v.nombre = i.nombre;
+                            v.apellidos = i.apellidos;
+                            v.domicilio = i.domicilio;
+                            v.permiso = i.permiso;
+                            v.disponibilidad = (bool)i.disponibilidad;
+                            //MessageBox.Show("El Conductor " + v.id_conductor + " esta duplicado");
+                        }
+                        else
+                        {
+                            db.Conductor.Add(i);
+                        }
                     }
-                    else
-                    {
-                        db.Conductors.Add(i);
-                        MessageBox.Show("Se ha cargado el XML");
-                    }
+                    MessageBox.Show("Se ha cargado el XML");
+                    db.SaveChanges();
                 }
-                db.SaveChanges();
 
             }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error al cargar el XML" + err.Message);
+            }
 
+            XDocument xDocM = XDocument.Load(@"mercancias.xml");
+
+            try
+            {
+
+                List<Mercancia> mercancias = xDocM.Descendants("Mercancia").Select
+                (mercancia =>
+                new Mercancia
+                {
+                    id_producto = Int32.Parse(mercancia.Element("id_producto").Value),
+                    nombre = mercancia.Element("nombre").Value,
+                    volumenProducto = float.Parse(mercancia.Element("volumenProducto").Value)
+                }
+                ).ToList();
+
+                using (netAssistantsEntities db = new netAssistantsEntities())
+                {
+                    foreach (var i in mercancias)
+                    {
+                        var v = db.Mercancia.Where(a => a.id_producto.Equals(i.id_producto)).FirstOrDefault();
+                        if (v != null)
+                        {
+                            v.id_producto = i.id_producto;
+                            v.nombre = i.nombre;
+                            v.volumenProducto = i.volumenProducto;
+                            MessageBox.Show("El Conductor " + v.id_producto + " esta duplicado");
+                        }
+                        else
+                        {
+                            db.Mercancia.Add(i);
+                        }
+                    }
+                    MessageBox.Show("Se ha cargado el XML");
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error al cargar el XML" + err);
+            }
             /*using (netAssistantsEntities db = new netAssistantsEntities())
             {
                 DataSet dataSet = new DataSet();
@@ -162,64 +257,64 @@ namespace App.SQL
 
                 }
             }*/
-        }
 
-        /*SqlConnection connection = new SqlConnection();
+            /*SqlConnection connection = new SqlConnection();
 
-        static string servidor = "localhost";
-        static string username = "NewSA";
-        static string password = "root";
-        static string bd = "netAssistants";
-        static string port = "1433";
+            static string servidor = "localhost";
+            static string username = "NewSA";
+            static string password = "root";
+            static string bd = "netAssistants";
+            static string port = "1433";
 
-        string cadenaConexion = "Data Source=" + servidor + "," + port + ";" + "user id=" + username + ";" + "password=" + password + ";" + "Initial Catalog=" + bd + ";" + "Persist Security Info=true";
+            string cadenaConexion = "Data Source=" + servidor + "," + port + ";" + "user id=" + username + ";" + "password=" + password + ";" + "Initial Catalog=" + bd + ";" + "Persist Security Info=true";
 
-        public SqlConnection Connection()
-        {
-            try{
-                connection.ConnectionString = cadenaConexion;
-                connection.Open();
-                MessageBox.Show("Conexion a la base de datos exitosa");
-            }
-            catch(SqlException e)
+            public SqlConnection Connection()
             {
-                MessageBox.Show("Error al conectar a la base de datos"+e.ToString());
-            }
-            return connection;
-        }
-        public void CreateTable()
-        {
-
-            string createTableStatementMercancia = "CREATE TABLE Mercancia(id_mercancia int PRIMARY KEY, nombre VARCHAR(10), volumenProducto FLOAT)";
-            string createTableStatementVehiculo = "CREATE TABLE Vehiculo(id_vehiculo int PRIMARY KEY, marca VARCHAR(10), tipoVehiculo VARCHAR(10), disponibilidadVehiculo BIT, volumenGasolina FLOAT, estado BIT)";
-            string createTableStatementConductor = "CREATE TABLE Conductor(id_conductor int PRIMARY KEY, nombre VARCHAR(10), apellidos VARCHAR(20), domicilio VARCHAR(15), permisoConducir VARCHAR(10), disponibilidad BIT)"; 
-            string createTableStatementRuta = "CREATE TABLE Ruta(id_ruta int PRIMARY KEY, origen_ruta VARCHAR(10), destino_ruta VARCHAR(10), repostar_gasolina BIT, fecha_ruta DATE, duracion_ruta DATE, precio_repostaje FLOAT, kms_ruta FLOAT)";
-
-            try
-            {
-
-                if (connection.State == System.Data.ConnectionState.Closed)
-                {
+                try{
+                    connection.ConnectionString = cadenaConexion;
                     connection.Open();
+                    MessageBox.Show("Conexion a la base de datos exitosa");
                 }
-                SqlCommand cmd;
-                cmd = new SqlCommand(createTableStatementMercancia, connection);
-                cmd.ExecuteNonQuery();
-                cmd = new SqlCommand(createTableStatementVehiculo, connection);
-                cmd.ExecuteNonQuery();
-                cmd = new SqlCommand(createTableStatementConductor, connection);
-                cmd.ExecuteNonQuery();
-                cmd = new SqlCommand(createTableStatementRuta, connection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Tabla Mercancia creada");
-
+                catch(SqlException e)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos"+e.ToString());
+                }
+                return connection;
             }
-            catch(Exception e)
+            public void CreateTable()
             {
-                MessageBox.Show(e.Message);
-            }
 
-        }*/
+                string createTableStatementMercancia = "CREATE TABLE Mercancia(id_mercancia int PRIMARY KEY, nombre VARCHAR(10), volumenProducto FLOAT)";
+                string createTableStatementVehiculo = "CREATE TABLE Vehiculo(id_vehiculo int PRIMARY KEY, marca VARCHAR(10), tipoVehiculo VARCHAR(10), disponibilidadVehiculo BIT, volumenGasolina FLOAT, estado BIT)";
+                string createTableStatementConductor = "CREATE TABLE Conductor(id_conductor int PRIMARY KEY, nombre VARCHAR(10), apellidos VARCHAR(20), domicilio VARCHAR(15), permisoConducir VARCHAR(10), disponibilidad BIT)"; 
+                string createTableStatementRuta = "CREATE TABLE Ruta(id_ruta int PRIMARY KEY, origen_ruta VARCHAR(10), destino_ruta VARCHAR(10), repostar_gasolina BIT, fecha_ruta DATE, duracion_ruta DATE, precio_repostaje FLOAT, kms_ruta FLOAT)";
 
+                try
+                {
+
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
+                    SqlCommand cmd;
+                    cmd = new SqlCommand(createTableStatementMercancia, connection);
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand(createTableStatementVehiculo, connection);
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand(createTableStatementConductor, connection);
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand(createTableStatementRuta, connection);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Tabla Mercancia creada");
+
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+
+            }*/
+
+        }
     }
 }

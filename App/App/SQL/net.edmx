@@ -11,29 +11,29 @@
           </Key>
           <Property Name="id_conductor" Type="int" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="10" />
-          <Property Name="apellidos" Type="varchar" MaxLength="10" />
-          <Property Name="domicilio" Type="varchar" MaxLength="10" />
-          <Property Name="permiso" Type="varchar" MaxLength="5" />
+          <Property Name="apellidos" Type="varchar" MaxLength="20" />
+          <Property Name="domicilio" Type="varchar" MaxLength="15" />
+          <Property Name="permiso" Type="varchar" MaxLength="10" />
           <Property Name="disponibilidad" Type="bit" />
         </EntityType>
         <EntityType Name="Mercancia">
           <Key>
-            <PropertyRef Name="id_mercancia" />
+            <PropertyRef Name="id_producto" />
           </Key>
-          <Property Name="id_mercancia" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="nombre" Type="varchar" MaxLength="10" />
+          <Property Name="id_producto" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
           <Property Name="volumenProducto" Type="float" />
         </EntityType>
         <EntityType Name="Ruta">
           <Key>
             <PropertyRef Name="id_ruta" />
           </Key>
-          <Property Name="id_ruta" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="origen_ruta" Type="varchar" MaxLength="10" />
-          <Property Name="destino_ruta" Type="varchar" MaxLength="10" />
+          <Property Name="id_ruta" Type="int" Nullable="false" />
+          <Property Name="origen_ruta" Type="varchar" MaxLength="50" />
+          <Property Name="destino_ruta" Type="varchar" MaxLength="50" />
           <Property Name="repostar_gasolina" Type="bit" />
           <Property Name="fecha_ruta" Type="date" />
-          <Property Name="duracion_ruta" Type="datetime" />
+          <Property Name="duracion" Type="date" />
           <Property Name="precio_repostaje" Type="float" />
           <Property Name="kms_ruta" Type="float" />
         </EntityType>
@@ -41,9 +41,9 @@
           <Key>
             <PropertyRef Name="id_vehiculo" />
           </Key>
-          <Property Name="id_vehiculo" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="marca" Type="varchar" MaxLength="10" />
-          <Property Name="tipoVehiculo" Type="varchar" MaxLength="10" />
+          <Property Name="id_vehiculo" Type="int" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="50" />
+          <Property Name="tipoVehiculo" Type="varchar" MaxLength="50" />
           <Property Name="disponibilidadVehiculo" Type="bit" />
           <Property Name="volumenGasolina" Type="float" />
           <Property Name="estado" Type="bit" />
@@ -65,29 +65,29 @@
           </Key>
           <Property Name="id_conductor" Type="Int32" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="apellidos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="domicilio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="permiso" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="apellidos" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="domicilio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="permiso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="disponibilidad" Type="Boolean" />
         </EntityType>
         <EntityType Name="Mercancia">
           <Key>
-            <PropertyRef Name="id_mercancia" />
+            <PropertyRef Name="id_producto" />
           </Key>
-          <Property Name="id_mercancia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nombre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="id_producto" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="volumenProducto" Type="Double" />
         </EntityType>
         <EntityType Name="Ruta">
           <Key>
             <PropertyRef Name="id_ruta" />
           </Key>
-          <Property Name="id_ruta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="origen_ruta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="destino_ruta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="id_ruta" Type="Int32" Nullable="false" />
+          <Property Name="origen_ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="destino_ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="repostar_gasolina" Type="Boolean" />
           <Property Name="fecha_ruta" Type="DateTime" Precision="0" />
-          <Property Name="duracion_ruta" Type="DateTime" Precision="3" />
+          <Property Name="duracion" Type="DateTime" Precision="0" />
           <Property Name="precio_repostaje" Type="Double" />
           <Property Name="kms_ruta" Type="Double" />
         </EntityType>
@@ -95,26 +95,26 @@
           <Key>
             <PropertyRef Name="id_vehiculo" />
           </Key>
-          <Property Name="id_vehiculo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="marca" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="tipoVehiculo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="id_vehiculo" Type="Int32" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tipoVehiculo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="disponibilidadVehiculo" Type="Boolean" />
           <Property Name="volumenGasolina" Type="Double" />
           <Property Name="estado" Type="Boolean" />
         </EntityType>
-        <EntityContainer Name="netAssistantsEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Conductors" EntityType="Self.Conductor" />
-          <EntitySet Name="Mercancias" EntityType="Self.Mercancia" />
-          <EntitySet Name="Rutas" EntityType="Self.Ruta" />
-          <EntitySet Name="Vehiculoes" EntityType="Self.Vehiculo" />
+        <EntityContainer Name="netAssistantsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Conductor" EntityType="Self.Conductor" />
+          <EntitySet Name="Mercancia" EntityType="Self.Mercancia" />
+          <EntitySet Name="Ruta" EntityType="Self.Ruta" />
+          <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="netAssistantsModelStoreContainer" CdmEntityContainer="netAssistantsEntities1">
-          <EntitySetMapping Name="Conductors">
+        <EntityContainerMapping StorageEntityContainer="netAssistantsModelStoreContainer" CdmEntityContainer="netAssistantsEntities">
+          <EntitySetMapping Name="Conductor">
             <EntityTypeMapping TypeName="netAssistantsModel.Conductor">
               <MappingFragment StoreEntitySet="Conductor">
                 <ScalarProperty Name="id_conductor" ColumnName="id_conductor" />
@@ -126,16 +126,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Mercancias">
+          <EntitySetMapping Name="Mercancia">
             <EntityTypeMapping TypeName="netAssistantsModel.Mercancia">
               <MappingFragment StoreEntitySet="Mercancia">
-                <ScalarProperty Name="id_mercancia" ColumnName="id_mercancia" />
+                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="volumenProducto" ColumnName="volumenProducto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Rutas">
+          <EntitySetMapping Name="Ruta">
             <EntityTypeMapping TypeName="netAssistantsModel.Ruta">
               <MappingFragment StoreEntitySet="Ruta">
                 <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
@@ -143,13 +143,13 @@
                 <ScalarProperty Name="destino_ruta" ColumnName="destino_ruta" />
                 <ScalarProperty Name="repostar_gasolina" ColumnName="repostar_gasolina" />
                 <ScalarProperty Name="fecha_ruta" ColumnName="fecha_ruta" />
-                <ScalarProperty Name="duracion_ruta" ColumnName="duracion_ruta" />
+                <ScalarProperty Name="duracion" ColumnName="duracion" />
                 <ScalarProperty Name="precio_repostaje" ColumnName="precio_repostaje" />
                 <ScalarProperty Name="kms_ruta" ColumnName="kms_ruta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Vehiculoes">
+          <EntitySetMapping Name="Vehiculo">
             <EntityTypeMapping TypeName="netAssistantsModel.Vehiculo">
               <MappingFragment StoreEntitySet="Vehiculo">
                 <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
@@ -175,7 +175,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

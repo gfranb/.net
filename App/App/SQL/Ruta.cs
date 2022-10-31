@@ -14,12 +14,12 @@ namespace App.SQL
     
     public partial class Ruta
     {
-        public string id_ruta { get; set; }
+        public int id_ruta { get; set; }
         public string origen_ruta { get; set; }
         public string destino_ruta { get; set; }
         public Nullable<bool> repostar_gasolina { get; set; }
         public Nullable<System.DateTime> fecha_ruta { get; set; }
-        public Nullable<System.DateTime> duracion_ruta { get; set; }
+        public Nullable<System.DateTime> duracion { get; set; }
         public Nullable<double> precio_repostaje { get; set; }
         public Nullable<double> kms_ruta { get; set; }
     }

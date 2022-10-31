@@ -16,7 +16,7 @@ namespace App.SQL
     public partial class netAssistantsEntities : DbContext
     {
         public netAssistantsEntities()
-            : base("name=netAssistantsEntities1")
+            : base("name=netAssistantsEntities")
         {
         }
     
@@ -25,9 +25,9 @@ namespace App.SQL
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Conductor> Conductors { get; set; }
-        public virtual DbSet<Mercancia> Mercancias { get; set; }
-        public virtual DbSet<Ruta> Rutas { get; set; }
-        public virtual DbSet<Vehiculo> Vehiculoes { get; set; }
+        public virtual DbSet<Conductor> Conductor { get; set; }
+        public virtual DbSet<Mercancia> Mercancia { get; set; }
+        public virtual DbSet<Ruta> Ruta { get; set; }
+        public virtual DbSet<Vehiculo> Vehiculo { get; set; }
     }
 }
