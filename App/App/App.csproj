@@ -61,16 +61,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="modelo\Conductor.cs" />
     <Compile Include="modelo\GestionRuta.cs" />
     <Compile Include="modelo\ListaConductor.cs" />
@@ -127,7 +117,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-
     <None Include="netAssistantsDataSet.xsc">
       <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
     </None>
@@ -138,7 +127,6 @@
     </None>
     <None Include="netAssistantsDataSet.xss">
       <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
-
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -162,7 +150,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +167,5 @@
       <LastGenOutput>net.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

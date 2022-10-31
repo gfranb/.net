@@ -12,11 +12,8 @@ namespace App.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-<<<<<<< HEAD
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
-=======
+
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
->>>>>>> produccion
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -30,13 +27,9 @@ namespace App.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-<<<<<<< HEAD
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MJTE1F9;Initial Catalog=netAssistants;Persist Security Info=T" +
             "rue;User ID=sa;Password=1234")]
-=======
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=netAssistants;Persist Security Info=True;Us" +
-            "er ID=NewSA;Password=root")]
->>>>>>> produccion
+
         public string netAssistantsConnectionString {
             get {
                 return ((string)(this["netAssistantsConnectionString"]));
