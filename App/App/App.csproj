@@ -62,6 +62,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="modelo\Conductor.cs" />
+    <Compile Include="modelo\GestionRuta.cs" />
     <Compile Include="modelo\ListaConductor.cs" />
     <Compile Include="modelo\ListaMercancia.cs" />
     <Compile Include="modelo\ListaRuta.cs" />
