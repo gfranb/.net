@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App.SQL
+namespace App.controlador
 {
-    internal class SQL_Mercancia
+    internal class Controlador
     {
-        
     }
 }
