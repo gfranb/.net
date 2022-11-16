@@ -8,15 +8,15 @@ namespace WindowsFormsApp1.modelo
 {
     internal class Conductor
     {
-        private string id_conductor;
+        private int id_conductor;
         private string nombre;
         private string apellidos;
         private string domicilio;
         private string permisoConducir;
-        private Boolean disponibilidad;
+        private bool disponibilidad;
        
 
-        Conductor(string id_conductor, string nombre, string apellidos,  string domicilio, string permisoConducir, Boolean disponibilidad)
+        Conductor(int id_conductor, string nombre, string apellidos,  string domicilio, string permisoConducir, bool disponibilidad)
         {
             this.id_conductor = id_conductor;
             this.nombre = nombre;
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.modelo
 
         }
 
-        public void set_id_conductor(string id)
+        public void set_id_conductor(int id)
         {
             this.id_conductor = id;
         }
@@ -55,12 +55,12 @@ namespace WindowsFormsApp1.modelo
         {
             this.permisoConducir = permiso;
         }
-        public void set_disponibilidad(Boolean disponibilidad)
+        public void set_disponibilidad(bool disponibilidad)
         {
             this.disponibilidad = disponibilidad;
         }
 
-        public string get_id_conductor()
+        public int get_id_conductor()
         {
             return this.id_conductor;
         }
