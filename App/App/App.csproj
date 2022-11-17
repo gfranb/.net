@@ -112,6 +112,12 @@
     <Compile Include="vistas\IAddConductor.Designer.cs">
       <DependentUpon>IAddConductor.cs</DependentUpon>
     </Compile>
+    <Compile Include="vistas\IAddMercancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IAddMercancia.Designer.cs">
+      <DependentUpon>IAddMercancia.cs</DependentUpon>
+    </Compile>
     <Compile Include="vistas\IAddVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="vistas\IDeleteConductor.Designer.cs">
       <DependentUpon>IDeleteConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IDeleteMercancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IDeleteMercancia.Designer.cs">
+      <DependentUpon>IDeleteMercancia.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\IDeleteVehiculo.cs">
       <SubType>Form</SubType>
@@ -141,6 +153,12 @@
     </Compile>
     <Compile Include="vistas\IShowConductor.Designer.cs">
       <DependentUpon>IShowConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IShowMercancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IShowMercancia.Designer.cs">
+      <DependentUpon>IShowMercancia.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\IShowVehiculo.cs">
       <SubType>Form</SubType>
@@ -163,11 +181,17 @@
     <EmbeddedResource Include="vistas\IAddConductor.resx">
       <DependentUpon>IAddConductor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IAddMercancia.resx">
+      <DependentUpon>IAddMercancia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\IAddVehiculo.resx">
       <DependentUpon>IAddVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\IDeleteConductor.resx">
       <DependentUpon>IDeleteConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IDeleteMercancia.resx">
+      <DependentUpon>IDeleteMercancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\IDeleteVehiculo.resx">
       <DependentUpon>IDeleteVehiculo.cs</DependentUpon>
@@ -177,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\IShowConductor.resx">
       <DependentUpon>IShowConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IShowMercancia.resx">
+      <DependentUpon>IShowMercancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\IShowVehiculo.resx">
       <DependentUpon>IShowVehiculo.cs</DependentUpon>

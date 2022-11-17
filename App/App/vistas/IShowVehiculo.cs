@@ -29,10 +29,19 @@ namespace App.vistas
           
                     out_marca_vehiculo.Text = "a";
                     out_tipo_vehiculo.Text = "a";
-                    out_volumen_gasolina.Text = "a";
                     out_disponibilidad_vehiculo.Text = "a";
+                    panelDatosVehiculo.Show();
 
-            panelDatosVehiculo.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void out_marca_vehiculo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

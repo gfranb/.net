@@ -159,5 +159,21 @@ namespace App
         {
             openChildrenForm(new IShowVehiculo());
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            openChildrenForm(new IAddMercancia());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            openChildrenForm(new IDeleteMercancia());
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            openChildrenForm(new IShowMercancia());
+        }
     }
 }

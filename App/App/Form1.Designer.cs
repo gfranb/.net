@@ -118,6 +118,7 @@
             this.button11.Text = "Mostrar Mercancia";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -134,6 +135,7 @@
             this.button12.Text = "Eliminar Mercancia";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -150,6 +152,7 @@
             this.button13.Text = "Anadir Mercancia";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // btnMercancia
             // 

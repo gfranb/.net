@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.conductorNombre = new System.Windows.Forms.Label();
+            this.in_Matricula = new System.Windows.Forms.TextBox();
             this.panelDatosVehiculo = new System.Windows.Forms.Panel();
             this.out_disponibilidad_vehiculo = new System.Windows.Forms.Label();
             this.disponibilidad_vehiculo = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.tipo_vehiculo = new System.Windows.Forms.Label();
             this.out_marca_vehiculo = new System.Windows.Forms.Label();
             this.marca_vehiculo = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.conductorNombre = new System.Windows.Forms.Label();
-            this.in_Matricula = new System.Windows.Forms.TextBox();
             this.panelDatosVehiculo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,38 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(467, 86);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 44);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Buscar Vehiculo";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // conductorNombre
+            // 
+            this.conductorNombre.AutoSize = true;
+            this.conductorNombre.Location = new System.Drawing.Point(156, 102);
+            this.conductorNombre.Name = "conductorNombre";
+            this.conductorNombre.Size = new System.Drawing.Size(50, 13);
+            this.conductorNombre.TabIndex = 26;
+            this.conductorNombre.Text = "Matricula";
+            this.conductorNombre.Click += new System.EventHandler(this.conductorNombre_Click);
+            // 
+            // in_Matricula
+            // 
+            this.in_Matricula.Location = new System.Drawing.Point(212, 98);
+            this.in_Matricula.Name = "in_Matricula";
+            this.in_Matricula.Size = new System.Drawing.Size(249, 20);
+            this.in_Matricula.TabIndex = 25;
             // 
             // panelDatosVehiculo
             // 
@@ -67,10 +99,10 @@
             this.panelDatosVehiculo.Controls.Add(this.tipo_vehiculo);
             this.panelDatosVehiculo.Controls.Add(this.out_marca_vehiculo);
             this.panelDatosVehiculo.Controls.Add(this.marca_vehiculo);
-            this.panelDatosVehiculo.Location = new System.Drawing.Point(139, 136);
+            this.panelDatosVehiculo.Location = new System.Drawing.Point(149, 172);
             this.panelDatosVehiculo.Name = "panelDatosVehiculo";
             this.panelDatosVehiculo.Size = new System.Drawing.Size(432, 282);
-            this.panelDatosVehiculo.TabIndex = 28;
+            this.panelDatosVehiculo.TabIndex = 34;
             // 
             // out_disponibilidad_vehiculo
             // 
@@ -138,6 +170,7 @@
             this.out_marca_vehiculo.Size = new System.Drawing.Size(117, 13);
             this.out_marca_vehiculo.TabIndex = 24;
             this.out_marca_vehiculo.Text = "Aqui muestra el nombre";
+            this.out_marca_vehiculo.Click += new System.EventHandler(this.out_marca_vehiculo_Click);
             // 
             // marca_vehiculo
             // 
@@ -147,37 +180,6 @@
             this.marca_vehiculo.Size = new System.Drawing.Size(40, 13);
             this.marca_vehiculo.TabIndex = 23;
             this.marca_vehiculo.Text = "Marca:";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(467, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 44);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Buscar Vehiculo";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // conductorNombre
-            // 
-            this.conductorNombre.AutoSize = true;
-            this.conductorNombre.Location = new System.Drawing.Point(156, 102);
-            this.conductorNombre.Name = "conductorNombre";
-            this.conductorNombre.Size = new System.Drawing.Size(50, 13);
-            this.conductorNombre.TabIndex = 26;
-            this.conductorNombre.Text = "Matricula";
-            this.conductorNombre.Click += new System.EventHandler(this.conductorNombre_Click);
-            // 
-            // in_Matricula
-            // 
-            this.in_Matricula.Location = new System.Drawing.Point(212, 98);
-            this.in_Matricula.Name = "in_Matricula";
-            this.in_Matricula.Size = new System.Drawing.Size(249, 20);
-            this.in_Matricula.TabIndex = 25;
             // 
             // IShowVehiculo
             // 
@@ -203,6 +205,9 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label conductorNombre;
+        private System.Windows.Forms.TextBox in_Matricula;
         private System.Windows.Forms.Panel panelDatosVehiculo;
         private System.Windows.Forms.Label out_disponibilidad_vehiculo;
         private System.Windows.Forms.Label disponibilidad_vehiculo;
@@ -212,8 +217,5 @@
         private System.Windows.Forms.Label tipo_vehiculo;
         private System.Windows.Forms.Label out_marca_vehiculo;
         private System.Windows.Forms.Label marca_vehiculo;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label conductorNombre;
-        private System.Windows.Forms.TextBox in_Matricula;
     }
 }
