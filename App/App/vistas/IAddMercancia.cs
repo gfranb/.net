@@ -26,5 +26,22 @@ namespace App.vistas
         {
             this.Close();
         }
+
+        private void btn_add_Mercancia_Click(object sender, EventArgs e)
+        {
+            List<string> mercancia = new List<string>();
+            mercancia.Add("25");
+            mercancia.Add(in_mercancia_nombre.Text);
+            mercancia.Add(in_mercancia_volumen.Text);
+            controlador.Controlador controlador = new controlador.Controlador();
+            if (controlador.addMercancia(mercancia))
+            {
+                MessageBox.Show("Mercancia creada correctamente.");
+            }
+            else
+            {
+                MessageBox.Show("La Mercancia ya existe.");
+            }
+        }
     }
 }

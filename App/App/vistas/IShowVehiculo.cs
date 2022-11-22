@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using App.modelo;
+using App.controlador;
 
 namespace App.vistas
 {
@@ -41,6 +42,14 @@ namespace App.vistas
 
         private void out_marca_vehiculo_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void in_Matricula_TextChanged(object sender, EventArgs e)
+        {
+            Controlador controlador = new Controlador();
+            
+            
 
         }
     }

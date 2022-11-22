@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.controlador;
 
 namespace App.vistas
 {
@@ -25,10 +26,20 @@ namespace App.vistas
 
         private void btn_buscar_mercancia_Click(object sender, EventArgs e)
         {
-            out_nombre_mercancia.Text = "Mercancia";
-            out_volumen_mercancia.Text = "Volumen";
+            Controlador controlador = new Controlador();
+            List<string> listaM = controlador.buscarMercancia(in_Mercancia.Text);
+            if (listaM != null)
+            {
+                out_nombre_mercancia.Text = listaM[1];
+                out_volumen_mercancia.Text = listaM[2];
+                panelDatosMercancia.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("No se encuentra la Mercancía.");
+            }
 
-            panelDatosMercancia.Visible = true;
+            
         }
 
         private void IShowMercancia_Load(object sender, EventArgs e)
@@ -39,6 +50,11 @@ namespace App.vistas
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void in_Mercancia_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
