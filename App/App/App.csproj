@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlador\Controlador.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,8 +103,69 @@
     </Compile>
     <Compile Include="SQL\SQLConnector.cs" />
     <Compile Include="SQL\SQL_Mercancia.cs" />
+    <Compile Include="SQL\SQL_Vehiculo.cs" />
     <Compile Include="SQL\Vehiculo.cs">
       <DependentUpon>net.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IAddConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IAddConductor.Designer.cs">
+      <DependentUpon>IAddConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IAddMercancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IAddMercancia.Designer.cs">
+      <DependentUpon>IAddMercancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IAddVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IAddVehiculo.Designer.cs">
+      <DependentUpon>IAddVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IDeleteConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IDeleteConductor.Designer.cs">
+      <DependentUpon>IDeleteConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IDeleteMercancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IDeleteMercancia.Designer.cs">
+      <DependentUpon>IDeleteMercancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IDeleteVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IDeleteVehiculo.Designer.cs">
+      <DependentUpon>IDeleteVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IEditConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IEditConductor.Designer.cs">
+      <DependentUpon>IEditConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IShowConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IShowConductor.Designer.cs">
+      <DependentUpon>IShowConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IShowMercancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IShowMercancia.Designer.cs">
+      <DependentUpon>IShowMercancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\IShowVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\IShowVehiculo.Designer.cs">
+      <DependentUpon>IShowVehiculo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,6 +179,36 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vistas\IAddConductor.resx">
+      <DependentUpon>IAddConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IAddMercancia.resx">
+      <DependentUpon>IAddMercancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IAddVehiculo.resx">
+      <DependentUpon>IAddVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IDeleteConductor.resx">
+      <DependentUpon>IDeleteConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IDeleteMercancia.resx">
+      <DependentUpon>IDeleteMercancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IDeleteVehiculo.resx">
+      <DependentUpon>IDeleteVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IEditConductor.resx">
+      <DependentUpon>IEditConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IShowConductor.resx">
+      <DependentUpon>IShowConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IShowMercancia.resx">
+      <DependentUpon>IShowMercancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\IShowVehiculo.resx">
+      <DependentUpon>IShowVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="netAssistantsDataSet.xsc">
       <DependentUpon>netAssistantsDataSet.xsd</DependentUpon>
     </None>
@@ -152,9 +244,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controlador\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SQL\net.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -166,6 +256,7 @@
       <DependentUpon>net.edmx</DependentUpon>
       <LastGenOutput>net.cs</LastGenOutput>
     </Content>
+    <Content Include="src\logoBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

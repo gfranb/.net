@@ -17,6 +17,7 @@ namespace App.modelo
         private Vehiculo vohiculo;
         private Ruta ruta;        
 
+
         public GestionRuta(string id_GestionRuta, double volumen, DateTime fechaEnvio)
         {
             this.id_GestionRuta = id_GestionRuta;
@@ -40,7 +41,8 @@ namespace App.modelo
         }
         public string getIdGestionRuta()
         {
-            return this.id_GestionRuta; 
+
+            return this.id_GestionRuta;
         }
         public void setIdGestionRuta(string idGestionRuta)
         {
