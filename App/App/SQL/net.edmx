@@ -16,6 +16,18 @@
           <Property Name="permiso" Type="varchar" MaxLength="10" />
           <Property Name="disponibilidad" Type="bit" />
         </EntityType>
+        <EntityType Name="GestionRuta">
+          <Key>
+            <PropertyRef Name="id_GestionRuta" />
+          </Key>
+          <Property Name="id_GestionRuta" Type="int" Nullable="false" />
+          <Property Name="volumen" Type="float" />
+          <Property Name="fechaEnvio" Type="date" />
+          <Property Name="id_conductor" Type="int" />
+          <Property Name="id_mercancia" Type="int" />
+          <Property Name="id_vehiculo" Type="int" />
+          <Property Name="id_ruta" Type="int" />
+        </EntityType>
         <EntityType Name="Mercancia">
           <Key>
             <PropertyRef Name="id_producto" />
@@ -50,6 +62,7 @@
         </EntityType>
         <EntityContainer Name="netAssistantsModelStoreContainer">
           <EntitySet Name="Conductor" EntityType="Self.Conductor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GestionRuta" EntityType="Self.GestionRuta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mercancia" EntityType="Self.Mercancia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ruta" EntityType="Self.Ruta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" Schema="dbo" store:Type="Tables" />
@@ -69,6 +82,18 @@
           <Property Name="domicilio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="permiso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="disponibilidad" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="GestionRuta">
+          <Key>
+            <PropertyRef Name="id_GestionRuta" />
+          </Key>
+          <Property Name="id_GestionRuta" Type="Int32" Nullable="false" />
+          <Property Name="volumen" Type="Double" />
+          <Property Name="fechaEnvio" Type="DateTime" Precision="0" />
+          <Property Name="id_conductor" Type="Int32" />
+          <Property Name="id_mercancia" Type="Int32" />
+          <Property Name="id_vehiculo" Type="Int32" />
+          <Property Name="id_ruta" Type="Int32" />
         </EntityType>
         <EntityType Name="Mercancia">
           <Key>
@@ -103,10 +128,11 @@
           <Property Name="estado" Type="Boolean" />
         </EntityType>
         <EntityContainer Name="netAssistantsEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Conductor" EntityType="Self.Conductor" />
-          <EntitySet Name="Mercancia" EntityType="Self.Mercancia" />
-          <EntitySet Name="Ruta" EntityType="Self.Ruta" />
-          <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" />
+          <EntitySet Name="Conductors" EntityType="Self.Conductor" />
+          <EntitySet Name="GestionRutas" EntityType="Self.GestionRuta" />
+          <EntitySet Name="Mercancias" EntityType="Self.Mercancia" />
+          <EntitySet Name="Rutas" EntityType="Self.Ruta" />
+          <EntitySet Name="Vehiculoes" EntityType="Self.Vehiculo" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -114,7 +140,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="netAssistantsModelStoreContainer" CdmEntityContainer="netAssistantsEntities">
-          <EntitySetMapping Name="Conductor">
+          <EntitySetMapping Name="Conductors">
             <EntityTypeMapping TypeName="netAssistantsModel.Conductor">
               <MappingFragment StoreEntitySet="Conductor">
                 <ScalarProperty Name="id_conductor" ColumnName="id_conductor" />
@@ -126,7 +152,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Mercancia">
+          <EntitySetMapping Name="GestionRutas">
+            <EntityTypeMapping TypeName="netAssistantsModel.GestionRuta">
+              <MappingFragment StoreEntitySet="GestionRuta">
+                <ScalarProperty Name="id_GestionRuta" ColumnName="id_GestionRuta" />
+                <ScalarProperty Name="volumen" ColumnName="volumen" />
+                <ScalarProperty Name="fechaEnvio" ColumnName="fechaEnvio" />
+                <ScalarProperty Name="id_conductor" ColumnName="id_conductor" />
+                <ScalarProperty Name="id_mercancia" ColumnName="id_mercancia" />
+                <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+                <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mercancias">
             <EntityTypeMapping TypeName="netAssistantsModel.Mercancia">
               <MappingFragment StoreEntitySet="Mercancia">
                 <ScalarProperty Name="id_producto" ColumnName="id_producto" />
@@ -135,7 +174,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Ruta">
+          <EntitySetMapping Name="Rutas">
             <EntityTypeMapping TypeName="netAssistantsModel.Ruta">
               <MappingFragment StoreEntitySet="Ruta">
                 <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
@@ -149,7 +188,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Vehiculo">
+          <EntitySetMapping Name="Vehiculoes">
             <EntityTypeMapping TypeName="netAssistantsModel.Vehiculo">
               <MappingFragment StoreEntitySet="Vehiculo">
                 <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
@@ -175,7 +214,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

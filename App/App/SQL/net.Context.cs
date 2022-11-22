@@ -26,6 +26,7 @@ namespace App.SQL
         }
     
         public virtual DbSet<Conductor> Conductor { get; set; }
+        public virtual DbSet<GestionRuta> GestionRuta { get; set; }
         public virtual DbSet<Mercancia> Mercancia { get; set; }
         public virtual DbSet<Ruta> Ruta { get; set; }
         public virtual DbSet<Vehiculo> Vehiculo { get; set; }

@@ -111,6 +111,8 @@ namespace App
         private void button29_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            openChildrenForm(new IRuta());
+
         }
 
         private Form formularioActivo = null;
