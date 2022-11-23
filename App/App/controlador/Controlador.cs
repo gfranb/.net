@@ -30,6 +30,16 @@ namespace App.controlador
             return sqlVehiculo.buscarVehiculo(id);
         }
 
-       
+        public bool addVehiculo(List<string> listav)
+        {
+            SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
+            return sqlVehiculo.addVehiculo(listav);
+        }
+
+        public bool eliminarVehiculo(string id)
+        {
+            SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
+            return sqlVehiculo.eliminarVehiculo(id);
+        }
     }
 }

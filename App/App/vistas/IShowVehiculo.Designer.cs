@@ -141,6 +141,7 @@
             this.out_volumen_gasolina.Size = new System.Drawing.Size(227, 16);
             this.out_volumen_gasolina.TabIndex = 28;
             this.out_volumen_gasolina.Text = "Aqui muestra el volumen de gasolina";
+            this.out_volumen_gasolina.Click += new System.EventHandler(this.out_volumen_gasolina_Click);
             // 
             // volumen_gasolina
             // 
@@ -151,6 +152,7 @@
             this.volumen_gasolina.Size = new System.Drawing.Size(115, 16);
             this.volumen_gasolina.TabIndex = 27;
             this.volumen_gasolina.Text = "Gasolina restante:";
+            this.volumen_gasolina.Click += new System.EventHandler(this.volumen_gasolina_Click);
             // 
             // out_tipo_vehiculo
             // 

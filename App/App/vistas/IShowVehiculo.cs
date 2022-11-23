@@ -27,11 +27,20 @@ namespace App.vistas
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
-                    out_marca_vehiculo.Text = "a";
-                    out_tipo_vehiculo.Text = "a";
-                    out_disponibilidad_vehiculo.Text = "a";
-                    panelDatosVehiculo.Show();
+            Controlador controlador = new Controlador();
+            List<string> listaVehi = controlador.buscarVehiculo(in_Matricula.Text);
+            if (listaVehi != null)
+            {
+                out_marca_vehiculo.Text = listaVehi[1];
+                out_tipo_vehiculo.Text = listaVehi[2];
+                out_volumen_gasolina.Text = listaVehi[4];
+                out_disponibilidad_vehiculo.Text = listaVehi[3];
+                panelDatosVehiculo.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se encuentra el Vehículo.");
+            }
 
         }
 
@@ -50,6 +59,16 @@ namespace App.vistas
             Controlador controlador = new Controlador();
             
             
+
+        }
+
+        private void out_volumen_gasolina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void volumen_gasolina_Click(object sender, EventArgs e)
+        {
 
         }
     }
