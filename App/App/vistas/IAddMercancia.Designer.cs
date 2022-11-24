@@ -44,7 +44,7 @@
             this.btn_add_Mercancia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_add_Mercancia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_add_Mercancia.ForeColor = System.Drawing.Color.White;
-            this.btn_add_Mercancia.Location = new System.Drawing.Point(277, 277);
+            this.btn_add_Mercancia.Location = new System.Drawing.Point(277, 308);
             this.btn_add_Mercancia.Name = "btn_add_Mercancia";
             this.btn_add_Mercancia.Size = new System.Drawing.Size(143, 42);
             this.btn_add_Mercancia.TabIndex = 19;
@@ -55,7 +55,7 @@
             // volumenMercancia
             // 
             this.volumenMercancia.AutoSize = true;
-            this.volumenMercancia.Location = new System.Drawing.Point(155, 191);
+            this.volumenMercancia.Location = new System.Drawing.Point(155, 222);
             this.volumenMercancia.Name = "volumenMercancia";
             this.volumenMercancia.Size = new System.Drawing.Size(48, 13);
             this.volumenMercancia.TabIndex = 14;
@@ -63,7 +63,7 @@
             // 
             // in_mercancia_volumen
             // 
-            this.in_mercancia_volumen.Location = new System.Drawing.Point(277, 184);
+            this.in_mercancia_volumen.Location = new System.Drawing.Point(277, 215);
             this.in_mercancia_volumen.Name = "in_mercancia_volumen";
             this.in_mercancia_volumen.Size = new System.Drawing.Size(249, 20);
             this.in_mercancia_volumen.TabIndex = 13;
@@ -71,7 +71,7 @@
             // mercanciaNombre
             // 
             this.mercanciaNombre.AutoSize = true;
-            this.mercanciaNombre.Location = new System.Drawing.Point(155, 165);
+            this.mercanciaNombre.Location = new System.Drawing.Point(155, 196);
             this.mercanciaNombre.Name = "mercanciaNombre";
             this.mercanciaNombre.Size = new System.Drawing.Size(106, 13);
             this.mercanciaNombre.TabIndex = 12;
@@ -80,7 +80,7 @@
             // 
             // in_mercancia_nombre
             // 
-            this.in_mercancia_nombre.Location = new System.Drawing.Point(277, 158);
+            this.in_mercancia_nombre.Location = new System.Drawing.Point(277, 189);
             this.in_mercancia_nombre.Name = "in_mercancia_nombre";
             this.in_mercancia_nombre.Size = new System.Drawing.Size(249, 20);
             this.in_mercancia_nombre.TabIndex = 11;
@@ -102,7 +102,7 @@
             // label_mercancia_id
             // 
             this.label_mercancia_id.AutoSize = true;
-            this.label_mercancia_id.Location = new System.Drawing.Point(155, 139);
+            this.label_mercancia_id.Location = new System.Drawing.Point(155, 170);
             this.label_mercancia_id.Name = "label_mercancia_id";
             this.label_mercancia_id.Size = new System.Drawing.Size(78, 13);
             this.label_mercancia_id.TabIndex = 21;
@@ -110,7 +110,7 @@
             // 
             // in_mercancia_id
             // 
-            this.in_mercancia_id.Location = new System.Drawing.Point(277, 132);
+            this.in_mercancia_id.Location = new System.Drawing.Point(277, 163);
             this.in_mercancia_id.Name = "in_mercancia_id";
             this.in_mercancia_id.Size = new System.Drawing.Size(249, 20);
             this.in_mercancia_id.TabIndex = 20;
@@ -119,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(707, 504);
             this.Controls.Add(this.label_mercancia_id);
             this.Controls.Add(this.in_mercancia_id);

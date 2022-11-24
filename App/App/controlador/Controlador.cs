@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace App.controlador
 {
@@ -15,6 +16,13 @@ namespace App.controlador
             return sqlMercancia.buscarMercancia(id);
         }
 
+        public void mostrarPedidos(DataGridView dataGridView1)
+        {
+            using (netAssistantsEntities db = new netAssistantsEntities())
+            {
+                dataGridView1.DataSource = db.GestionRuta.ToList();
+            }
+        }
         public bool addMercancia(List<string> listaM)
         {
             SQL.SQL_Mercancia sqlMercancia = new SQL.SQL_Mercancia();

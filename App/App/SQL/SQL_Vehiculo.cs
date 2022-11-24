@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.SQL
 {
-    internal class SQL_Vehiculo
+    public class SQL_Vehiculo
     {
         public List<string> buscarVehiculo(string id)
         {

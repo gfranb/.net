@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.SQL
 {
-    internal class SQL_Mercancia
+    public class SQL_Mercancia
     {
         public List<string> buscarMercancia(string id)
         {

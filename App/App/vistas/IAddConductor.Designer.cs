@@ -58,7 +58,7 @@
             // 
             // in_conductor_nombre
             // 
-            this.in_conductor_nombre.Location = new System.Drawing.Point(221, 141);
+            this.in_conductor_nombre.Location = new System.Drawing.Point(287, 175);
             this.in_conductor_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.in_conductor_nombre.Name = "in_conductor_nombre";
             this.in_conductor_nombre.Size = new System.Drawing.Size(249, 20);
@@ -67,7 +67,7 @@
             // conductorNombre
             // 
             this.conductorNombre.AutoSize = true;
-            this.conductorNombre.Location = new System.Drawing.Point(97, 147);
+            this.conductorNombre.Location = new System.Drawing.Point(163, 181);
             this.conductorNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.conductorNombre.Name = "conductorNombre";
             this.conductorNombre.Size = new System.Drawing.Size(44, 13);
@@ -78,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 168);
+            this.label1.Location = new System.Drawing.Point(163, 202);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
@@ -88,7 +88,7 @@
             // 
             // in_conductor_apellido
             // 
-            this.in_conductor_apellido.Location = new System.Drawing.Point(221, 162);
+            this.in_conductor_apellido.Location = new System.Drawing.Point(287, 196);
             this.in_conductor_apellido.Margin = new System.Windows.Forms.Padding(2);
             this.in_conductor_apellido.Name = "in_conductor_apellido";
             this.in_conductor_apellido.Size = new System.Drawing.Size(249, 20);
@@ -97,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 189);
+            this.label2.Location = new System.Drawing.Point(163, 223);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
@@ -106,7 +106,7 @@
             // 
             // in_conductor_domicilio
             // 
-            this.in_conductor_domicilio.Location = new System.Drawing.Point(221, 183);
+            this.in_conductor_domicilio.Location = new System.Drawing.Point(287, 217);
             this.in_conductor_domicilio.Margin = new System.Windows.Forms.Padding(2);
             this.in_conductor_domicilio.Name = "in_conductor_domicilio";
             this.in_conductor_domicilio.Size = new System.Drawing.Size(249, 20);
@@ -115,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 211);
+            this.label3.Location = new System.Drawing.Point(163, 245);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 13);
@@ -124,7 +124,7 @@
             // 
             // in_conductor_permiso
             // 
-            this.in_conductor_permiso.Location = new System.Drawing.Point(221, 204);
+            this.in_conductor_permiso.Location = new System.Drawing.Point(287, 238);
             this.in_conductor_permiso.Margin = new System.Windows.Forms.Padding(2);
             this.in_conductor_permiso.Name = "in_conductor_permiso";
             this.in_conductor_permiso.Size = new System.Drawing.Size(249, 20);
@@ -136,7 +136,7 @@
             this.btn_add_conductor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_add_conductor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_add_conductor.ForeColor = System.Drawing.Color.White;
-            this.btn_add_conductor.Location = new System.Drawing.Point(211, 289);
+            this.btn_add_conductor.Location = new System.Drawing.Point(277, 323);
             this.btn_add_conductor.Name = "btn_add_conductor";
             this.btn_add_conductor.Size = new System.Drawing.Size(143, 42);
             this.btn_add_conductor.TabIndex = 9;
@@ -147,7 +147,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 126);
+            this.label4.Location = new System.Drawing.Point(163, 160);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
@@ -156,7 +156,7 @@
             // 
             // in_conductor_id
             // 
-            this.in_conductor_id.Location = new System.Drawing.Point(221, 119);
+            this.in_conductor_id.Location = new System.Drawing.Point(287, 153);
             this.in_conductor_id.Margin = new System.Windows.Forms.Padding(2);
             this.in_conductor_id.Name = "in_conductor_id";
             this.in_conductor_id.Size = new System.Drawing.Size(249, 20);
@@ -167,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(530, 410);
+            this.ClientSize = new System.Drawing.Size(707, 504);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.in_conductor_id);
             this.Controls.Add(this.btn_add_conductor);

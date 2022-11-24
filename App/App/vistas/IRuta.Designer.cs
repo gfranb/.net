@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_gestion_ruta = new System.Windows.Forms.Button();
             this.in_ruta_idvehiculo = new System.Windows.Forms.TextBox();
             this.in_ruta_idmercancia = new System.Windows.Forms.TextBox();
             this.in_ruta_idconductor = new System.Windows.Forms.TextBox();
@@ -43,17 +42,9 @@
             this.ruta1 = new System.Windows.Forms.RadioButton();
             this.in_ruta_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_generar_ruta = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_gestion_ruta
-            // 
-            this.btn_gestion_ruta.Location = new System.Drawing.Point(439, 311);
-            this.btn_gestion_ruta.Name = "btn_gestion_ruta";
-            this.btn_gestion_ruta.Size = new System.Drawing.Size(106, 23);
-            this.btn_gestion_ruta.TabIndex = 36;
-            this.btn_gestion_ruta.Text = "Realizar solicitud";
-            this.btn_gestion_ruta.UseVisualStyleBackColor = true;
-            this.btn_gestion_ruta.Click += new System.EventHandler(this.btn_gestion_ruta_Click);
             // 
             // in_ruta_idvehiculo
             // 
@@ -178,15 +169,44 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Id ruta";
             // 
+            // btn_generar_ruta
+            // 
+            this.btn_generar_ruta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_generar_ruta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.btn_generar_ruta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.btn_generar_ruta.ForeColor = System.Drawing.Color.White;
+            this.btn_generar_ruta.Location = new System.Drawing.Point(429, 310);
+            this.btn_generar_ruta.Name = "btn_generar_ruta";
+            this.btn_generar_ruta.Size = new System.Drawing.Size(143, 42);
+            this.btn_generar_ruta.TabIndex = 39;
+            this.btn_generar_ruta.Text = "Realizar Solicitud";
+            this.btn_generar_ruta.UseVisualStyleBackColor = false;
+            this.btn_generar_ruta.Click += new System.EventHandler(this.btn_eliminar_vehiculo_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // IRuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(707, 504);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_generar_ruta);
             this.Controls.Add(this.in_ruta_id);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_gestion_ruta);
             this.Controls.Add(this.in_ruta_idvehiculo);
             this.Controls.Add(this.in_ruta_idmercancia);
             this.Controls.Add(this.in_ruta_idconductor);
@@ -209,8 +229,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_gestion_ruta;
         private System.Windows.Forms.TextBox in_ruta_idvehiculo;
         private System.Windows.Forms.TextBox in_ruta_idmercancia;
         private System.Windows.Forms.TextBox in_ruta_idconductor;
@@ -225,5 +243,7 @@
         private System.Windows.Forms.RadioButton ruta1;
         private System.Windows.Forms.TextBox in_ruta_id;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_generar_ruta;
+        private System.Windows.Forms.Button button1;
     }
 }

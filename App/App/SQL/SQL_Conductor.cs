@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.SQL
 {
-    internal class SQL_Conductor
+    public class SQL_Conductor
     {
         public List<string> buscarConductor(string id)
         {

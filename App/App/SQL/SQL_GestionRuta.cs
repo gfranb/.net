@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.SQL
 {
-    internal class SQL_GestionRuta
+    public class SQL_GestionRuta
     {
         public bool newSolicitud(string gestion_ruta, string idRuta, string idConductor, string idMercancia, string idVehiculo, string v)
         {

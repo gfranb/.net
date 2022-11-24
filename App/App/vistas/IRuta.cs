@@ -33,11 +33,6 @@ namespace App.vistas
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void IRuta_Load(object sender, EventArgs e)
         {
 
@@ -51,8 +46,13 @@ namespace App.vistas
         private void btn_gestion_ruta_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_eliminar_vehiculo_Click(object sender, EventArgs e)
+        {
+
             controlador.Controlador controlador = new controlador.Controlador();
-            if(ruta1.Checked == true)
+            if (ruta1.Checked == true)
             {
                 List<string> dataGestionRuta = new List<string>();
                 dataGestionRuta.Add(in_ruta_id.Text);
@@ -62,7 +62,7 @@ namespace App.vistas
                 dataGestionRuta.Add(in_ruta_idmercancia.Text);
                 dataGestionRuta.Add(in_ruta_volumen.Text);
                 int op = controlador.gestionarRuta(dataGestionRuta);
-                if (op==0)
+                if (op == 0)
                 {
                     MessageBox.Show("Solicitud registrada con exito");
                 }
@@ -120,7 +120,8 @@ namespace App.vistas
                 {
                     MessageBox.Show("Solicitud registrada con exito");
                 }
-                else{
+                else
+                {
                     switch (op)
                     {
                         case 1:
@@ -130,6 +131,11 @@ namespace App.vistas
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

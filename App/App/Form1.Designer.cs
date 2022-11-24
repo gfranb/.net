@@ -48,10 +48,14 @@
             this.btnConductor = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_pedidos = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMercanciaSubMenu.SuspendLayout();
             this.panelVehiculosSubMenu.SuspendLayout();
             this.panelConductorSubMenu.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -363,11 +367,36 @@
             // 
             // panelContenedor
             // 
+            this.panelContenedor.Controls.Add(this.panel3);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(193, 0);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(707, 504);
             this.panelContenedor.TabIndex = 1;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btn_pedidos);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(707, 504);
+            this.panel3.TabIndex = 43;
+            // 
+            // btn_pedidos
+            // 
+            this.btn_pedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_pedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.btn_pedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.btn_pedidos.ForeColor = System.Drawing.Color.White;
+            this.btn_pedidos.Location = new System.Drawing.Point(552, 12);
+            this.btn_pedidos.Name = "btn_pedidos";
+            this.btn_pedidos.Size = new System.Drawing.Size(143, 42);
+            this.btn_pedidos.TabIndex = 40;
+            this.btn_pedidos.Text = "Buscar Pedidos";
+            this.btn_pedidos.UseVisualStyleBackColor = false;
+            this.btn_pedidos.Click += new System.EventHandler(this.btn_pedidos_Click);
             // 
             // Form1
             // 
@@ -383,6 +412,8 @@
             this.panelMercanciaSubMenu.ResumeLayout(false);
             this.panelVehiculosSubMenu.ResumeLayout(false);
             this.panelConductorSubMenu.ResumeLayout(false);
+            this.panelContenedor.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -409,6 +440,8 @@
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_pedidos;
     }
 }
 

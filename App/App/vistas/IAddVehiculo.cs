@@ -40,5 +40,10 @@ namespace App.vistas
                 MessageBox.Show("El Vehículo ya existe.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -11,7 +11,7 @@ using WindowsFormsApp1.modelo;
 
 namespace App.SQL
 {
-    internal class SQLConnector
+    public class SQLConnector
     {
 
         public void showValuesGrid(DataGridView dataGridView1)
