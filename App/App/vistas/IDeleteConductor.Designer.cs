@@ -40,28 +40,32 @@
             this.btn_eliminar_conductor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_eliminar_conductor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_eliminar_conductor.ForeColor = System.Drawing.Color.White;
-            this.btn_eliminar_conductor.Location = new System.Drawing.Point(273, 265);
+            this.btn_eliminar_conductor.Location = new System.Drawing.Point(364, 326);
+            this.btn_eliminar_conductor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminar_conductor.Name = "btn_eliminar_conductor";
-            this.btn_eliminar_conductor.Size = new System.Drawing.Size(143, 42);
+            this.btn_eliminar_conductor.Size = new System.Drawing.Size(191, 52);
             this.btn_eliminar_conductor.TabIndex = 18;
             this.btn_eliminar_conductor.Text = "Eliminar Conductor";
             this.btn_eliminar_conductor.UseVisualStyleBackColor = false;
+            this.btn_eliminar_conductor.Click += new System.EventHandler(this.btn_eliminar_conductor_Click);
             // 
             // label_idConductor
             // 
             this.label_idConductor.AutoSize = true;
-            this.label_idConductor.Location = new System.Drawing.Point(307, 200);
+            this.label_idConductor.Location = new System.Drawing.Point(409, 246);
+            this.label_idConductor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_idConductor.Name = "label_idConductor";
-            this.label_idConductor.Size = new System.Drawing.Size(70, 13);
+            this.label_idConductor.Size = new System.Drawing.Size(84, 16);
             this.label_idConductor.TabIndex = 11;
             this.label_idConductor.Text = "ID Conductor";
             this.label_idConductor.Click += new System.EventHandler(this.conductorNombre_Click);
             // 
             // in_conductor_eliminar
             // 
-            this.in_conductor_eliminar.Location = new System.Drawing.Point(225, 229);
+            this.in_conductor_eliminar.Location = new System.Drawing.Point(300, 282);
+            this.in_conductor_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in_conductor_eliminar.Name = "in_conductor_eliminar";
-            this.in_conductor_eliminar.Size = new System.Drawing.Size(249, 20);
+            this.in_conductor_eliminar.Size = new System.Drawing.Size(331, 22);
             this.in_conductor_eliminar.TabIndex = 10;
             this.in_conductor_eliminar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -71,9 +75,10 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(16, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 19;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -81,15 +86,16 @@
             // 
             // IDeleteConductor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(707, 504);
+            this.ClientSize = new System.Drawing.Size(943, 620);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_eliminar_conductor);
             this.Controls.Add(this.label_idConductor);
             this.Controls.Add(this.in_conductor_eliminar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IDeleteConductor";
             this.Text = "IDeleteConductor";
             this.ResumeLayout(false);

@@ -102,6 +102,7 @@
       <DependentUpon>net.tt</DependentUpon>
     </Compile>
     <Compile Include="SQL\SQLConnector.cs" />
+    <Compile Include="SQL\SQL_Conductor.cs" />
     <Compile Include="SQL\SQL_Mercancia.cs" />
     <Compile Include="SQL\SQL_Vehiculo.cs" />
     <Compile Include="SQL\Vehiculo.cs">

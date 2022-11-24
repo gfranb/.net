@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.controlador;
 
 namespace App.vistas
 {
@@ -20,13 +21,20 @@ namespace App.vistas
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            out_nombre_conductor.Text = "Gianfranco";
-            out_apellido_conductor.Text = "Bonanno";
-            out_domicilio_conductor.Text = "Carrer Cartagena 171";
-            out_permiso_conductor.Text = "A3123444";
-
-            panelDatosConductor.Show();
+            Controlador controlador = new Controlador();
+            List<string> listaC = controlador.buscarConductor(in_id_conductor.Text);
+            if (listaC != null)
+            {
+                out_nombre_conductor.Text = listaC[1];
+                out_apellido_conductor.Text = listaC[2];
+                out_domicilio_conductor.Text = listaC[3];
+                out_permiso_conductor.Text = listaC[4];
+                panelDatosConductor.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se encuentra al Conductor.");
+            }
 
         }
 

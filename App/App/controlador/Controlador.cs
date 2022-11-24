@@ -41,5 +41,29 @@ namespace App.controlador
             SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
             return sqlVehiculo.eliminarVehiculo(id);
         }
+
+        public List<string> buscarConductor(string id)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.buscarConductor(id);
+        }
+
+        public bool addConductor(List<string> listaCon)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.addConductor(listaCon);
+        }
+
+        public bool deleteConductor(string idCon)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.eliminarConductor(idCon);
+        }
+
+        public bool editarConductor(List<string> listaCon)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.editarConductor(listaCon);
+        }
     }
 }
