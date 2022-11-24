@@ -42,6 +42,7 @@ namespace App.vistas
 
         }
 
+<<<<<<< HEAD
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -50,6 +51,27 @@ namespace App.vistas
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+=======
+        private void btn_add_conductor_Click(object sender, EventArgs e)
+        {
+            List<string> conductor = new List<string>();
+            conductor.Add("25");
+            conductor.Add(in_conductor_nombre.Text);
+            conductor.Add(in_conductor_apellido.Text);
+            conductor.Add(in_conductor_domicilio.Text);
+            conductor.Add(in_conductor_permiso.Text);
+            conductor.Add("false");
+
+            controlador.Controlador controlador = new controlador.Controlador();
+            if (controlador.addConductor(conductor))
+            {
+                MessageBox.Show("Conductor creado correctamente.");
+            }
+            else
+            {
+                MessageBox.Show("El Conductor ya existe.");
+            }
+>>>>>>> bd45d7802c68850eb431c2a7821b252c6c6aa683
         }
     }
 }

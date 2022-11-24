@@ -36,6 +36,7 @@ namespace App.controlador
             //SQL.SQL_Mercancia sqlConductor = new SQL.SQL_Conductor();
             //SQL.SQL_Mercancia sqlVehiculo = new SQL.SQL_Vehiculo();
 
+<<<<<<< HEAD
             //List<string> conductor = sqlMercancia.buscarConductor(data[1]);
             //List<string> vehiculo = sqlMercancia.buscarVehiculo(data[2]);
             List<string> mercancia = sqlMercancia.buscarMercancia(data[3]);
@@ -101,5 +102,42 @@ namespace App.controlador
             }
         }
        
+=======
+        public bool addVehiculo(List<string> listav)
+        {
+            SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
+            return sqlVehiculo.addVehiculo(listav);
+        }
+
+        public bool eliminarVehiculo(string id)
+        {
+            SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
+            return sqlVehiculo.eliminarVehiculo(id);
+        }
+
+        public List<string> buscarConductor(string id)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.buscarConductor(id);
+        }
+
+        public bool addConductor(List<string> listaCon)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.addConductor(listaCon);
+        }
+
+        public bool deleteConductor(string idCon)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.eliminarConductor(idCon);
+        }
+
+        public bool editarConductor(List<string> listaCon)
+        {
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            return sqlConductor.editarConductor(listaCon);
+        }
+>>>>>>> bd45d7802c68850eb431c2a7821b252c6c6aa683
     }
 }

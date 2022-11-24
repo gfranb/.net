@@ -36,5 +36,18 @@ namespace App.vistas
         {
 
         }
+
+        private void btn_eliminar_conductor_Click(object sender, EventArgs e)
+        {
+            controlador.Controlador controlador = new controlador.Controlador();
+            if (controlador.deleteConductor(in_conductor_eliminar.Text))
+            {
+                MessageBox.Show("Conductor eliminado.");
+            }
+            else
+            {
+                MessageBox.Show("Conductor no existe.");
+            }
+        }
     }
 }
