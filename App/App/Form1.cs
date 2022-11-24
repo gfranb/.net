@@ -19,6 +19,8 @@ namespace App
         {
             InitializeComponent();
             customizeDesing();
+            controlador.Controlador c = new controlador.Controlador();
+            c.generarRutas();
         }
 
         private void customizeDesing()

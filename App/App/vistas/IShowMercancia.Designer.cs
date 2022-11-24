@@ -147,11 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(707, 504);
-=======
-            this.ClientSize = new System.Drawing.Size(921, 572);
->>>>>>> 7a4ba40fc48d9f87f040b5cf95c7bfff6ef5b4aa
             this.Controls.Add(this.panelDatosMercancia);
             this.Controls.Add(this.btn_buscar_mercancia);
             this.Controls.Add(this.mercanciaNombre);
