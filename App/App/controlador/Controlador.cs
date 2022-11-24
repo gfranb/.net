@@ -32,26 +32,27 @@ namespace App.controlador
         }
         public int gestionarRuta(List<string> data)
         {
-            SQL.SQL_Mercancia sqlMercancia = new SQL.SQL_Mercancia();
-            //SQL.SQL_Mercancia sqlConductor = new SQL.SQL_Conductor();
-            //SQL.SQL_Mercancia sqlVehiculo = new SQL.SQL_Vehiculo();
+            SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
+            SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
+            
+            List<string> conductor = sqlConductor.buscarConductor(data[2]);
+            List<string> vehiculo = sqlVehiculo.buscarVehiculo(data[3]);
 
-<<<<<<< HEAD
-            //List<string> conductor = sqlMercancia.buscarConductor(data[1]);
-            //List<string> vehiculo = sqlMercancia.buscarVehiculo(data[2]);
-            List<string> mercancia = sqlMercancia.buscarMercancia(data[3]);
-
-            if (true /*conductor[6] == "false" */)
+            if (conductor[5] == "False")
             {
                 return 1;
-            } else if (true /*vehiculo[4] == "false"*/)
+            } else if (vehiculo[4] == "False")
             {
                 return 2;
             }else
             {
-                return 0;
+                SQL.SQL_GestionRuta gestionRuta = new SQL_GestionRuta();
+                if(gestionRuta.newSolicitud(data[0], data[1], data[2], data[3], data[4], data[4]))
+                {
+                    return 0;
+                }
+                return 3;
             }
-          
         }
 
         public void generarRutas()
@@ -101,8 +102,6 @@ namespace App.controlador
 
             }
         }
-       
-=======
         public bool addVehiculo(List<string> listav)
         {
             SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
@@ -137,7 +136,8 @@ namespace App.controlador
         {
             SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
             return sqlConductor.editarConductor(listaCon);
+
         }
->>>>>>> bd45d7802c68850eb431c2a7821b252c6c6aa683
+
     }
 }

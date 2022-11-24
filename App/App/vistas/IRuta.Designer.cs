@@ -41,11 +41,13 @@
             this.ruta3 = new System.Windows.Forms.RadioButton();
             this.ruta2 = new System.Windows.Forms.RadioButton();
             this.ruta1 = new System.Windows.Forms.RadioButton();
+            this.in_ruta_id = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_gestion_ruta
             // 
-            this.btn_gestion_ruta.Location = new System.Drawing.Point(440, 289);
+            this.btn_gestion_ruta.Location = new System.Drawing.Point(439, 311);
             this.btn_gestion_ruta.Name = "btn_gestion_ruta";
             this.btn_gestion_ruta.Size = new System.Drawing.Size(106, 23);
             this.btn_gestion_ruta.TabIndex = 36;
@@ -55,28 +57,28 @@
             // 
             // in_ruta_idvehiculo
             // 
-            this.in_ruta_idvehiculo.Location = new System.Drawing.Point(356, 251);
+            this.in_ruta_idvehiculo.Location = new System.Drawing.Point(355, 273);
             this.in_ruta_idvehiculo.Name = "in_ruta_idvehiculo";
             this.in_ruta_idvehiculo.Size = new System.Drawing.Size(299, 20);
             this.in_ruta_idvehiculo.TabIndex = 35;
             // 
             // in_ruta_idmercancia
             // 
-            this.in_ruta_idmercancia.Location = new System.Drawing.Point(356, 230);
+            this.in_ruta_idmercancia.Location = new System.Drawing.Point(355, 252);
             this.in_ruta_idmercancia.Name = "in_ruta_idmercancia";
             this.in_ruta_idmercancia.Size = new System.Drawing.Size(299, 20);
             this.in_ruta_idmercancia.TabIndex = 34;
             // 
             // in_ruta_idconductor
             // 
-            this.in_ruta_idconductor.Location = new System.Drawing.Point(356, 209);
+            this.in_ruta_idconductor.Location = new System.Drawing.Point(355, 231);
             this.in_ruta_idconductor.Name = "in_ruta_idconductor";
             this.in_ruta_idconductor.Size = new System.Drawing.Size(299, 20);
             this.in_ruta_idconductor.TabIndex = 33;
             // 
             // in_ruta_volumen
             // 
-            this.in_ruta_volumen.Location = new System.Drawing.Point(356, 188);
+            this.in_ruta_volumen.Location = new System.Drawing.Point(355, 210);
             this.in_ruta_volumen.Name = "in_ruta_volumen";
             this.in_ruta_volumen.Size = new System.Drawing.Size(299, 20);
             this.in_ruta_volumen.TabIndex = 32;
@@ -84,7 +86,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(239, 259);
+            this.label5.Location = new System.Drawing.Point(238, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 31;
@@ -93,7 +95,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(239, 235);
+            this.label4.Location = new System.Drawing.Point(238, 257);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 30;
@@ -102,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(239, 212);
+            this.label3.Location = new System.Drawing.Point(238, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 29;
@@ -111,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(239, 189);
+            this.label2.Location = new System.Drawing.Point(238, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 28;
@@ -160,11 +162,30 @@
             this.ruta1.Text = "Barcelona - Madrid";
             this.ruta1.UseVisualStyleBackColor = true;
             // 
+            // in_ruta_id
+            // 
+            this.in_ruta_id.Location = new System.Drawing.Point(355, 184);
+            this.in_ruta_id.Name = "in_ruta_id";
+            this.in_ruta_id.Size = new System.Drawing.Size(299, 20);
+            this.in_ruta_id.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(238, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Id ruta";
+            // 
             // IRuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(707, 504);
+            this.Controls.Add(this.in_ruta_id);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_gestion_ruta);
             this.Controls.Add(this.in_ruta_idvehiculo);
             this.Controls.Add(this.in_ruta_idmercancia);
@@ -202,5 +223,7 @@
         private System.Windows.Forms.RadioButton ruta3;
         private System.Windows.Forms.RadioButton ruta2;
         private System.Windows.Forms.RadioButton ruta1;
+        private System.Windows.Forms.TextBox in_ruta_id;
+        private System.Windows.Forms.Label label1;
     }
 }

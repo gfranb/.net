@@ -42,20 +42,10 @@ namespace App.vistas
 
         }
 
-<<<<<<< HEAD
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-=======
-        private void btn_add_conductor_Click(object sender, EventArgs e)
+        private void btn_add_conductor_Click_1(object sender, EventArgs e)
         {
             List<string> conductor = new List<string>();
-            conductor.Add("25");
+            conductor.Add(in_conductor_id.Text);
             conductor.Add(in_conductor_nombre.Text);
             conductor.Add(in_conductor_apellido.Text);
             conductor.Add(in_conductor_domicilio.Text);
@@ -71,7 +61,6 @@ namespace App.vistas
             {
                 MessageBox.Show("El Conductor ya existe.");
             }
->>>>>>> bd45d7802c68850eb431c2a7821b252c6c6aa683
         }
     }
 }

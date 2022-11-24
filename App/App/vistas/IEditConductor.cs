@@ -47,7 +47,7 @@ namespace App.vistas
         private void edit_conductor_Click(object sender, EventArgs e)
         {
             List<string> conductor = new List<string>();
-            conductor.Add("25");
+            conductor.Add(in_id_conductor.Text);
             conductor.Add(out_nombre_conductor.Text);
             conductor.Add(out_apellido_conductor.Text);
             conductor.Add(out_domicilio_conductor.Text);

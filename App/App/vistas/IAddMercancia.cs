@@ -30,7 +30,7 @@ namespace App.vistas
         private void btn_add_Mercancia_Click(object sender, EventArgs e)
         {
             List<string> mercancia = new List<string>();
-            mercancia.Add("25");
+            mercancia.Add(in_mercancia_id.Text);
             mercancia.Add(in_mercancia_nombre.Text);
             mercancia.Add(in_mercancia_volumen.Text);
             controlador.Controlador controlador = new controlador.Controlador();

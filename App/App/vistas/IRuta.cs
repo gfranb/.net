@@ -55,11 +55,12 @@ namespace App.vistas
             if(ruta1.Checked == true)
             {
                 List<string> dataGestionRuta = new List<string>();
-                dataGestionRuta.Add("ruta1");
-                dataGestionRuta.Add(in_ruta_volumen.Text);
+                dataGestionRuta.Add(in_ruta_id.Text);
+                dataGestionRuta.Add("1");
                 dataGestionRuta.Add(in_ruta_idconductor.Text);
                 dataGestionRuta.Add(in_ruta_idvehiculo.Text);
                 dataGestionRuta.Add(in_ruta_idmercancia.Text);
+                dataGestionRuta.Add(in_ruta_volumen.Text);
                 int op = controlador.gestionarRuta(dataGestionRuta);
                 if (op==0)
                 {
@@ -81,11 +82,12 @@ namespace App.vistas
             if (ruta2.Checked == true)
             {
                 List<string> dataGestionRuta = new List<string>();
-                dataGestionRuta.Add("ruta2");
-                dataGestionRuta.Add(in_ruta_volumen.Text);
+                dataGestionRuta.Add(in_ruta_id.Text);
+                dataGestionRuta.Add("2");
                 dataGestionRuta.Add(in_ruta_idconductor.Text);
                 dataGestionRuta.Add(in_ruta_idvehiculo.Text);
                 dataGestionRuta.Add(in_ruta_idmercancia.Text);
+                dataGestionRuta.Add(in_ruta_volumen.Text);
                 int op = controlador.gestionarRuta(dataGestionRuta);
                 if (op == 0)
                 {
@@ -107,11 +109,12 @@ namespace App.vistas
             if (ruta3.Checked == true)
             {
                 List<string> dataGestionRuta = new List<string>();
-                dataGestionRuta.Add("ruta3");
-                dataGestionRuta.Add(in_ruta_volumen.Text);
+                dataGestionRuta.Add(in_ruta_id.Text);
+                dataGestionRuta.Add("3");
                 dataGestionRuta.Add(in_ruta_idconductor.Text);
                 dataGestionRuta.Add(in_ruta_idvehiculo.Text);
                 dataGestionRuta.Add(in_ruta_idmercancia.Text);
+                dataGestionRuta.Add(in_ruta_volumen.Text);
                 int op = controlador.gestionarRuta(dataGestionRuta);
                 if (op == 0)
                 {
@@ -124,14 +127,9 @@ namespace App.vistas
                             MessageBox.Show("El conductor no esta disponible"); break;
                         case 2:
                             MessageBox.Show("El vehiculo no esta disponible"); break;
-                        case 3:
-                            MessageBox.Show("No hay mercancia disponible"); break;
                     }
                 }
             }
-
-            controlador.gestionarRuta();
-
         }
     }
 }

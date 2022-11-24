@@ -46,10 +46,9 @@
             this.btn_buscar_mercancia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_buscar_mercancia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.btn_buscar_mercancia.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar_mercancia.Location = new System.Drawing.Point(608, 94);
-            this.btn_buscar_mercancia.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_buscar_mercancia.Location = new System.Drawing.Point(456, 76);
             this.btn_buscar_mercancia.Name = "btn_buscar_mercancia";
-            this.btn_buscar_mercancia.Size = new System.Drawing.Size(139, 54);
+            this.btn_buscar_mercancia.Size = new System.Drawing.Size(104, 44);
             this.btn_buscar_mercancia.TabIndex = 32;
             this.btn_buscar_mercancia.Text = "Buscar Mercancia";
             this.btn_buscar_mercancia.UseVisualStyleBackColor = false;
@@ -58,19 +57,17 @@
             // mercanciaNombre
             // 
             this.mercanciaNombre.AutoSize = true;
-            this.mercanciaNombre.Location = new System.Drawing.Point(165, 113);
-            this.mercanciaNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mercanciaNombre.Location = new System.Drawing.Point(124, 92);
             this.mercanciaNombre.Name = "mercanciaNombre";
-            this.mercanciaNombre.Size = new System.Drawing.Size(86, 16);
+            this.mercanciaNombre.Size = new System.Drawing.Size(71, 13);
             this.mercanciaNombre.TabIndex = 31;
             this.mercanciaNombre.Text = "ID Mercancia";
             // 
             // in_Mercancia
             // 
-            this.in_Mercancia.Location = new System.Drawing.Point(268, 108);
-            this.in_Mercancia.Margin = new System.Windows.Forms.Padding(4);
+            this.in_Mercancia.Location = new System.Drawing.Point(201, 88);
             this.in_Mercancia.Name = "in_Mercancia";
-            this.in_Mercancia.Size = new System.Drawing.Size(331, 22);
+            this.in_Mercancia.Size = new System.Drawing.Size(249, 20);
             this.in_Mercancia.TabIndex = 30;
             this.in_Mercancia.TextChanged += new System.EventHandler(this.in_Mercancia_TextChanged);
             // 
@@ -80,10 +77,9 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(16, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 29;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,30 +91,27 @@
             this.panelDatosMercancia.Controls.Add(this.label1);
             this.panelDatosMercancia.Controls.Add(this.out_nombre_mercancia);
             this.panelDatosMercancia.Controls.Add(this.label2);
-            this.panelDatosMercancia.Location = new System.Drawing.Point(171, 175);
-            this.panelDatosMercancia.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDatosMercancia.Location = new System.Drawing.Point(128, 142);
             this.panelDatosMercancia.Name = "panelDatosMercancia";
-            this.panelDatosMercancia.Size = new System.Drawing.Size(576, 347);
+            this.panelDatosMercancia.Size = new System.Drawing.Size(432, 282);
             this.panelDatosMercancia.TabIndex = 34;
             // 
             // out_volumen_mercancia
             // 
             this.out_volumen_mercancia.AutoSize = true;
             this.out_volumen_mercancia.BackColor = System.Drawing.Color.Transparent;
-            this.out_volumen_mercancia.Location = new System.Drawing.Point(259, 135);
-            this.out_volumen_mercancia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.out_volumen_mercancia.Location = new System.Drawing.Point(194, 110);
             this.out_volumen_mercancia.Name = "out_volumen_mercancia";
-            this.out_volumen_mercancia.Size = new System.Drawing.Size(196, 16);
+            this.out_volumen_mercancia.Size = new System.Drawing.Size(157, 13);
             this.out_volumen_mercancia.TabIndex = 26;
             this.out_volumen_mercancia.Text = "Aqui muestra el tipo de vehiculo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 135);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(85, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 16);
+            this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 25;
             this.label1.Text = "Volumen disponible:";
             // 
@@ -126,27 +119,26 @@
             // 
             this.out_nombre_mercancia.AutoSize = true;
             this.out_nombre_mercancia.BackColor = System.Drawing.Color.Transparent;
-            this.out_nombre_mercancia.Location = new System.Drawing.Point(259, 105);
-            this.out_nombre_mercancia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.out_nombre_mercancia.Location = new System.Drawing.Point(194, 85);
             this.out_nombre_mercancia.Name = "out_nombre_mercancia";
-            this.out_nombre_mercancia.Size = new System.Drawing.Size(148, 16);
+            this.out_nombre_mercancia.Size = new System.Drawing.Size(117, 13);
             this.out_nombre_mercancia.TabIndex = 24;
             this.out_nombre_mercancia.Text = "Aqui muestra el nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 105);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(85, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Nombre:";
             // 
             // IShowMercancia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(707, 504);
             this.Controls.Add(this.panelDatosMercancia);
             this.Controls.Add(this.btn_buscar_mercancia);
@@ -154,7 +146,6 @@
             this.Controls.Add(this.in_Mercancia);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IShowMercancia";
             this.Text = "IShowMercancia";
             this.Load += new System.EventHandler(this.IShowMercancia_Load);
