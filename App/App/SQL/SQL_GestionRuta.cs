@@ -20,7 +20,7 @@ namespace App.SQL
                 pedido.id_conductor = Int32.Parse(idConductor);
                 pedido.id_mercancia = Int32.Parse(idMercancia);
                 pedido.id_vehiculo = Int32.Parse(idVehiculo);
-                pedido.volumen = float.Parse(gestion_ruta);
+                pedido.volumen = (float) Int32.Parse(v);
                 DateTime thisDay = DateTime.Today;
                 pedido.fechaEnvio = thisDay;
 

@@ -137,5 +137,10 @@ namespace App.vistas
         {
             this.Close();
         }
+
+        private void ruta1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

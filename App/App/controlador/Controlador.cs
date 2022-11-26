@@ -55,7 +55,7 @@ namespace App.controlador
             }else
             {
                 SQL.SQL_GestionRuta gestionRuta = new SQL_GestionRuta();
-                if(gestionRuta.newSolicitud(data[0], data[1], data[2], data[3], data[4], data[4]))
+                if(gestionRuta.newSolicitud(data[0], data[1], data[2], data[3], data[4], data[5]))
                 {
                     return 0;
                 }
