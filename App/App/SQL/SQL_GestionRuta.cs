@@ -39,10 +39,9 @@ namespace App.SQL
                 else
                 {
                     db.GestionRuta.Add(pedido);
+                    db.SaveChanges();
+                    return true;
                 }
-
-                db.SaveChanges();
-                return true;
                 
             }
         }

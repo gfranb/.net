@@ -86,5 +86,25 @@ namespace App.SQL
             }
         }
 
+        public bool cambiarEstado(string id)
+        {
+            int _id = Int32.Parse(id);
+            using (netAssistantsEntities db = new netAssistantsEntities())
+            {
+                var v = db.Vehiculo.Where(a => a.id_vehiculo.Equals(_id)).FirstOrDefault();
+                if (v != null)
+                {
+                    v.disponibilidadVehiculo = false;
+                    v.estado = false;
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
     }
 }

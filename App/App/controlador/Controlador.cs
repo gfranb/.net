@@ -49,18 +49,23 @@ namespace App.controlador
             if (conductor[5] == "False")
             {
                 return 1;
-            } else if (vehiculo[4] == "False")
+            }
+            else if (vehiculo[3] == "False")
             {
                 return 2;
-            }else
+            }
+            else
             {
                 SQL.SQL_GestionRuta gestionRuta = new SQL_GestionRuta();
-                if(gestionRuta.newSolicitud(data[0], data[1], data[2], data[3], data[4], data[4]))
+                if (gestionRuta.newSolicitud(data[0], data[1], data[2], data[3], data[4], data[5]))
                 {
+                    sqlConductor.cambiarEstado(data[2]);
+                    sqlVehiculo.cambiarEstado(data[4]);
                     return 0;
                 }
                 return 3;
             }
+            
         }
 
         public void generarRutas()
