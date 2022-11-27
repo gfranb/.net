@@ -75,7 +75,7 @@ namespace App.vistas
                         case 2:
                             MessageBox.Show("El vehiculo no esta disponible"); break;
                         case 3:
-                            MessageBox.Show("No hay mercancia disponible"); break;
+                            MessageBox.Show("El pedido con el ID " + in_ruta_id + " ya existe"); break;
                     }
                 }
             }
@@ -102,7 +102,7 @@ namespace App.vistas
                         case 2:
                             MessageBox.Show("El vehiculo no esta disponible"); break;
                         case 3:
-                            MessageBox.Show("No hay mercancia disponible"); break;
+                            MessageBox.Show("El pedido con el ID " + in_ruta_id + " ya existe"); break;
                     }
                 }
             }
@@ -128,6 +128,8 @@ namespace App.vistas
                             MessageBox.Show("El conductor no esta disponible"); break;
                         case 2:
                             MessageBox.Show("El vehiculo no esta disponible"); break;
+                        case 3:
+                            MessageBox.Show("El pedido con el ID " + in_ruta_id + " ya existe"); break;
                     }
                 }
             }

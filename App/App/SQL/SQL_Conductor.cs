@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.modelo;
 
 namespace App.SQL
 {
@@ -35,13 +36,14 @@ namespace App.SQL
 
         public bool addConductor(List<string> listaCon)
         {
+
             Conductor conductor = new Conductor();
             conductor.id_conductor = Int32.Parse(listaCon[0]);
             conductor.nombre = listaCon[1];
             conductor.apellidos = listaCon[2];
             conductor.domicilio = listaCon[3];
             conductor.permiso = listaCon[4];
-            conductor.disponibilidad = bool.Parse(listaCon[5]);
+            conductor.disponibilidad = true;
 
             using (netAssistantsEntities db = new netAssistantsEntities())
             {
@@ -66,12 +68,14 @@ namespace App.SQL
                 return true;
             }
         }
+
         public bool eliminarConductor(string i)
         {
             int id = Int32.Parse(i);
             using (netAssistantsEntities db = new netAssistantsEntities())
             {
                 var conductor = db.Conductor.Where(a => a.id_conductor.Equals(id)).FirstOrDefault();
+
                 if (conductor != null)
                 {
                     db.Conductor.Remove(conductor);
@@ -81,8 +85,10 @@ namespace App.SQL
                 }
 
                 return false;
+
             }
         }
+
         public bool editarConductor(List<string> listaCon)
         {
             Conductor conductor = new Conductor();
@@ -95,7 +101,6 @@ namespace App.SQL
 
             using (netAssistantsEntities db = new netAssistantsEntities())
             {
-
                 var v = db.Conductor.Where(a => a.id_conductor.Equals(conductor.id_conductor)).FirstOrDefault();
                 if (v != null)
                 {
@@ -114,5 +119,25 @@ namespace App.SQL
                 }
             }
         }
+
+        public bool cambiarEstado(string id)
+        {
+            int _id = Int32.Parse(id);
+            using (netAssistantsEntities db = new netAssistantsEntities())
+            {
+                var v = db.Conductor.Where(a => a.id_conductor.Equals(_id)).FirstOrDefault();
+                if (v != null)
+                {
+                    v.disponibilidad = false;
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
     }
 }
