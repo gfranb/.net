@@ -94,8 +94,11 @@ namespace App.SQL
                 var v = db.Vehiculo.Where(a => a.id_vehiculo.Equals(_id)).FirstOrDefault();
                 if (v != null)
                 {
+                    db.Vehiculo.Remove(v);
+                    db.SaveChanges();
                     v.disponibilidadVehiculo = false;
                     v.estado = false;
+                    db.Vehiculo.Add(v);
                     db.SaveChanges();
                     return true;
                 }
