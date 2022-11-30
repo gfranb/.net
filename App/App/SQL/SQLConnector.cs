@@ -62,6 +62,7 @@ namespace App.SQL
 
                 }
             }
+
             //exportar XML Mercancia
             using (netAssistantsEntities _db = new netAssistantsEntities())
             {
@@ -132,8 +133,8 @@ namespace App.SQL
                 }
             }
 
-                //exportar XML Ruta
-            using (netAssistantsEntities _db = new netAssistantsEntities())
+            //exportar XML Ruta
+            /*using (netAssistantsEntities _db = new netAssistantsEntities())
             {
                 try
                 {
@@ -156,7 +157,6 @@ namespace App.SQL
                                                 new XElement("destino_ruta", x.destino_ruta),
                                                 new XElement("repostar_gasolina", x.repostar_gasolina),
                                                 new XElement("fecha_ruta", x.fecha_ruta),
-                                                new XElement("duracion", x.duracion),
                                                 new XElement("precio_repostaje", x.precio_repostaje),
                                                 new XElement("kms_ruta", x.kms_ruta)
                                                 )));
@@ -174,7 +174,7 @@ namespace App.SQL
 
                 }
 
-            }
+            }*/
     
         }
 

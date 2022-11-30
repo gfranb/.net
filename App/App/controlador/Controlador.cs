@@ -1,6 +1,9 @@
 ﻿using App.SQL;
+using IronPython.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +17,62 @@ namespace App.controlador
         {
             SQL.SQL_Mercancia sqlMercancia = new SQL.SQL_Mercancia();
             return sqlMercancia.buscarMercancia(id);
+        }
+
+        public bool exportarXML()
+        {
+            SQLConnector connector = new SQLConnector();
+            try
+            {
+                connector.exportDataXML();
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public void runPythonScript2()
+        {
+            var engine = Python.CreateEngine();
+            var script = @"../../controlador/conectorOdoo.py";
+            var source = engine.CreateScriptSourceFromFile(script);
+
+            var elO = engine.Runtime.IO;
+
+            var results = new MemoryStream();
+            elO.SetOutput(results, Encoding.Default);
+
+            var scope = engine.CreateScope();
+            source.Execute(scope);
+
+            string str(byte[] x) => Encoding.Default.GetString(x);
+            MessageBox.Show(str(results.ToArray()));
+
+        }
+            public void runPythonScript()
+        {
+            var psi = new ProcessStartInfo();
+            psi.FileName = @"conectorOdoo.exe";
+
+            var script = @"../../controlador/conectorOdoo.py";
+            psi.Arguments = $"\"{script}\"";
+
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardInput = true;
+            psi.RedirectStandardError = true;
+
+            var errores = "";
+            var results = "";
+
+            using(var process = Process.Start(psi))
+            {
+                errores = process.StandardError.ReadToEnd();
+                results = process.StandardOutput.ReadToEnd();
+            }
+
+            MessageBox.Show(results);
         }
 
         public void mostrarPedidos(DataGridView dataGridView1)

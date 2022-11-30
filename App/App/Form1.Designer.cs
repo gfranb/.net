@@ -51,6 +51,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_pedidos = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMercanciaSubMenu.SuspendLayout();
             this.panelVehiculosSubMenu.SuspendLayout();
@@ -378,6 +379,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btn_pedidos);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -398,6 +400,20 @@
             this.btn_pedidos.Text = "Buscar Pedidos";
             this.btn_pedidos.UseVisualStyleBackColor = false;
             this.btn_pedidos.Click += new System.EventHandler(this.btn_pedidos_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(552, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 42);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Exportar informacion";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Form1
             // 
@@ -444,6 +460,7 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_pedidos;
+        private System.Windows.Forms.Button button1;
     }
 }
 

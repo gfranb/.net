@@ -208,5 +208,12 @@ namespace App
         private void dataGridView1_CellContentClick_3(object sender, DataGridViewCellEventArgs e)
         {
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            controlador.Controlador conector = new controlador.Controlador();
+            //conector.exportarXML();
+            conector.runPythonScript2();
+        }
     }
 }
