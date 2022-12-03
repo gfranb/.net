@@ -211,9 +211,8 @@ namespace App
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            controlador.Controlador conector = new controlador.Controlador();
-            //conector.exportarXML();
-            conector.runPythonScript2();
+            openChildrenForm(new IOdoo());
+        
         }
     }
 }

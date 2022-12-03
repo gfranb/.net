@@ -50,8 +50,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_pedidos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_pedidos = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMercanciaSubMenu.SuspendLayout();
             this.panelVehiculosSubMenu.SuspendLayout();
@@ -387,33 +387,33 @@
             this.panel3.Size = new System.Drawing.Size(707, 504);
             this.panel3.TabIndex = 43;
             // 
-            // btn_pedidos
-            // 
-            this.btn_pedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_pedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
-            this.btn_pedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
-            this.btn_pedidos.ForeColor = System.Drawing.Color.White;
-            this.btn_pedidos.Location = new System.Drawing.Point(552, 12);
-            this.btn_pedidos.Name = "btn_pedidos";
-            this.btn_pedidos.Size = new System.Drawing.Size(143, 42);
-            this.btn_pedidos.TabIndex = 40;
-            this.btn_pedidos.Text = "Buscar Pedidos";
-            this.btn_pedidos.UseVisualStyleBackColor = false;
-            this.btn_pedidos.Click += new System.EventHandler(this.btn_pedidos_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(552, 61);
+            this.button1.Location = new System.Drawing.Point(552, 233);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 42);
             this.button1.TabIndex = 41;
-            this.button1.Text = "Exportar informacion";
+            this.button1.Text = "Odoo";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btn_pedidos
+            // 
+            this.btn_pedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_pedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.btn_pedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.btn_pedidos.ForeColor = System.Drawing.Color.White;
+            this.btn_pedidos.Location = new System.Drawing.Point(552, 184);
+            this.btn_pedidos.Name = "btn_pedidos";
+            this.btn_pedidos.Size = new System.Drawing.Size(143, 42);
+            this.btn_pedidos.TabIndex = 40;
+            this.btn_pedidos.Text = "Buscar Pedidos";
+            this.btn_pedidos.UseVisualStyleBackColor = false;
+            this.btn_pedidos.Click += new System.EventHandler(this.btn_pedidos_Click);
             // 
             // Form1
             // 

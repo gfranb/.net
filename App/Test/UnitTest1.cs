@@ -15,9 +15,9 @@ namespace Test
             //Aranque
             List<string> conductor = new List<string>();
             //-------------------Anadir datos a la lista conductor.------------------
-            conductor.Add("12312");
-            conductor.Add("Tamara");
-            conductor.Add("Prieto");
+            conductor.Add("8888");
+            conductor.Add("Pepe");
+            conductor.Add("Grillo");
             conductor.Add("Barcelona");
             conductor.Add("A12312321");
             conductor.Add("True");

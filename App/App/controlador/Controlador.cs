@@ -1,5 +1,7 @@
 ﻿using App.SQL;
+using IronPython.Compiler.Ast;
 using IronPython.Hosting;
+using Microsoft.Scripting.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,12 +21,12 @@ namespace App.controlador
             return sqlMercancia.buscarMercancia(id);
         }
 
-        public bool exportarXML()
+        public bool exportarXML(int op)
         {
             SQLConnector connector = new SQLConnector();
             try
             {
-                connector.exportDataXML();
+                connector.exportDataXML(op);
                 return true;
             }catch(Exception e)
             {
@@ -32,47 +34,62 @@ namespace App.controlador
             }
         }
 
-        public void runPythonScript2()
+        public bool importarXML(int op)
         {
-            var engine = Python.CreateEngine();
-            var script = @"../../controlador/conectorOdoo.py";
-            var source = engine.CreateScriptSourceFromFile(script);
-
-            var elO = engine.Runtime.IO;
-
-            var results = new MemoryStream();
-            elO.SetOutput(results, Encoding.Default);
-
-            var scope = engine.CreateScope();
-            source.Execute(scope);
-
-            string str(byte[] x) => Encoding.Default.GetString(x);
-            MessageBox.Show(str(results.ToArray()));
-
+            SQLConnector connector = new SQLConnector();
+            try
+            {
+                connector.importDataXML(op);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
-            public void runPythonScript()
+
+        public void runPythonScript(int op)
         {
             var psi = new ProcessStartInfo();
-            psi.FileName = @"conectorOdoo.exe";
+            psi.FileName = @"C:\Users\gianf\AppData\Local\Programs\Python\Python311\python.exe";
+            var script = "";
 
-            var script = @"../../controlador/conectorOdoo.py";
+            switch (op){
+                case 1:
+                    script = @"../../bin/Debug/conectorOdooConductor.py";
+                    break;
+                case 2:
+                    script = @"../../bin/Debug/conectorOdooMercancia.py";
+                    break;
+                case 3:
+                    script = @"../../bin/Debug/conectorOdooVehiculo.py";
+                    break;
+                case 4:
+                    script = @"../../bin/Debug/conectorOdooPedido.py";
+                    break;
+                case 5:
+                    script = @"../../bin/Debug/conectorOdooRutas.py";
+                    break;
+            }
+            
             psi.Arguments = $"\"{script}\"";
+            Process process = new Process();
+            process.StartInfo = psi;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
 
-            psi.UseShellExecute = false;
-            psi.CreateNoWindow = true;
-            psi.RedirectStandardInput = true;
-            psi.RedirectStandardError = true;
+            process.Start();
 
-            var errores = "";
-            var results = "";
+            process.StartInfo.RedirectStandardOutput = true;
 
-            using(var process = Process.Start(psi))
+            while (!process.StandardOutput.EndOfStream)
             {
-                errores = process.StandardError.ReadToEnd();
-                results = process.StandardOutput.ReadToEnd();
+                string line = process.StandardOutput.ReadLine();
+                MessageBox.Show(line);
             }
 
-            MessageBox.Show(results);
+            process.WaitForExit();
         }
 
         public void mostrarPedidos(DataGridView dataGridView1)
@@ -82,6 +99,7 @@ namespace App.controlador
                 dataGridView1.DataSource = db.GestionRuta.ToList();
             }
         }
+
         public bool addMercancia(List<string> listaM)
         {
             SQL.SQL_Mercancia sqlMercancia = new SQL.SQL_Mercancia();
@@ -126,7 +144,6 @@ namespace App.controlador
             }
             
         }
-
         public void generarRutas()
         {
             Ruta ruta = new Ruta();
@@ -179,31 +196,26 @@ namespace App.controlador
             SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
             return sqlVehiculo.addVehiculo(listav);
         }
-
         public bool eliminarVehiculo(string id)
         {
             SQL.SQL_Vehiculo sqlVehiculo = new SQL.SQL_Vehiculo();
             return sqlVehiculo.eliminarVehiculo(id);
         }
-
         public List<string> buscarConductor(string id)
         {
             SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
             return sqlConductor.buscarConductor(id);
         }
-
         public bool addConductor(List<string> listaCon)
         {
             SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
             return sqlConductor.addConductor(listaCon);
         }
-
         public bool deleteConductor(string idCon)
         {
             SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
             return sqlConductor.eliminarConductor(idCon);
         }
-
         public bool editarConductor(List<string> listaCon)
         {
             SQL.SQL_Conductor sqlConductor = new SQL.SQL_Conductor();
@@ -212,4 +224,5 @@ namespace App.controlador
         }
 
     }
+
 }
