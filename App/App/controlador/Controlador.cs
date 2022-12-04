@@ -1,14 +1,8 @@
 ﻿using App.SQL;
-using IronPython.Compiler.Ast;
-using IronPython.Hosting;
-using Microsoft.Scripting.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App.controlador
@@ -88,7 +82,6 @@ namespace App.controlador
                 string line = process.StandardOutput.ReadLine();
                 MessageBox.Show(line);
             }
-
             process.WaitForExit();
         }
 
