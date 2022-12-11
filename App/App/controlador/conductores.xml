@@ -5,78 +5,14 @@
     <apellido>Parra</apellido>
     <domicilio>Barcelona</domicilio>
     <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
+    <disponibilidad>false</disponibilidad>
   </Conductor>
   <Conductor>
     <id_conductor>2</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
+    <nombre>Gianfranco</nombre>
+    <apellido>Bonanno</apellido>
     <domicilio>Barcelona</domicilio>
     <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>3</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>4</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>10</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>20</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>66</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>77</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>88</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
-  </Conductor>
-  <Conductor>
-    <id_conductor>99</id_conductor>
-    <nombre>Marc</nombre>
-    <apellido>Parra</apellido>
-    <domicilio>Barcelona</domicilio>
-    <permiso>A</permiso>
-    <disponibilidad>true</disponibilidad>
+    <disponibilidad>false</disponibilidad>
   </Conductor>
 </Lista>

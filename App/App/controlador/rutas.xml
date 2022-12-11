@@ -1,0 +1,29 @@
+<Lista>
+  <Ruta>
+    <id_ruta>1</id_ruta>
+    <origen_ruta>Barcelona</origen_ruta>
+    <destino_ruta>Madrid</destino_ruta>
+    <repostar_gasolina>true</repostar_gasolina>
+    <duracion>6</duracion>
+    <precio_repostaje>12.11</precio_repostaje>
+    <kms_ruta>626</kms_ruta>
+  </Ruta>
+  <Ruta>
+    <id_ruta>2</id_ruta>
+    <origen_ruta>Barcelona</origen_ruta>
+    <destino_ruta>Zaragoza</destino_ruta>
+    <repostar_gasolina>true</repostar_gasolina>
+    <duracion>3</duracion>
+    <precio_repostaje>10.11</precio_repostaje>
+    <kms_ruta>310</kms_ruta>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <origen_ruta>Barcelona</origen_ruta>
+    <destino_ruta>Valencia</destino_ruta>
+    <repostar_gasolina>true</repostar_gasolina>
+    <duracion>2</duracion>
+    <precio_repostaje>8.11</precio_repostaje>
+    <kms_ruta>260.42999267578125</kms_ruta>
+  </Ruta>
+</Lista>

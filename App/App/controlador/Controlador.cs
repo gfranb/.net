@@ -50,19 +50,19 @@ namespace App.controlador
 
             switch (op){
                 case 1:
-                    script = @"../../bin/Debug/conectorOdooConductor.py";
+                    script = @"/Flota/python/conectorOdooConductor.py";
                     break;
                 case 2:
-                    script = @"../../bin/Debug/conectorOdooMercancia.py";
+                    script = @"/Flota/python/conectorOdooMercancia.py";
                     break;
                 case 3:
-                    script = @"../../bin/Debug/conectorOdooVehiculo.py";
+                    script = @"/Flota/python/conectorOdooVehiculo.py";
                     break;
                 case 4:
-                    script = @"../../bin/Debug/conectorOdooPedido.py";
+                    script = @"/Flota/python/conectorOdooPedido.py";
                     break;
                 case 5:
-                    script = @"../../bin/Debug/conectorOdooRutas.py";
+                    script = @"/Flota/python/conectorOdooRutas.py";
                     break;
             }
             

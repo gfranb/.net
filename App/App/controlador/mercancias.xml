@@ -1,0 +1,32 @@
+<Lista>
+  <Mercancia>
+    <id_producto>1</id_producto>
+    <nombre>agua</nombre>
+    <volumenProducto>1</volumenProducto>
+  </Mercancia>
+  <Mercancia>
+    <id_producto>2</id_producto>
+    <nombre>agua</nombre>
+    <volumenProducto>1</volumenProducto>
+  </Mercancia>
+  <Mercancia>
+    <id_producto>3</id_producto>
+    <nombre>agua</nombre>
+    <volumenProducto>1</volumenProducto>
+  </Mercancia>
+  <Mercancia>
+    <id_producto>4</id_producto>
+    <nombre>agua</nombre>
+    <volumenProducto>1</volumenProducto>
+  </Mercancia>
+  <Mercancia>
+    <id_producto>5</id_producto>
+    <nombre>agua</nombre>
+    <volumenProducto>1</volumenProducto>
+  </Mercancia>
+  <Mercancia>
+    <id_producto>25</id_producto>
+    <nombre>Pepep</nombre>
+    <volumenProducto>12</volumenProducto>
+  </Mercancia>
+</Lista>

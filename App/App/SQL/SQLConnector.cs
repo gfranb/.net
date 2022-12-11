@@ -54,7 +54,7 @@ namespace App.SQL
                                                      new XElement("permiso", x.permiso),
                                                      new XElement("disponibilidad", x.disponibilidad)
                                                      )));
-                            FileStream xmlFile = File.OpenWrite(@"conductores.xml");
+                            FileStream xmlFile = File.OpenWrite(@"/Flota/python/conductores.xml");
                             byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
                             xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
                             xmlFile.Close();
@@ -87,7 +87,7 @@ namespace App.SQL
                                              new XElement("nombre", x.nombre),
                                              new XElement("volumenProducto", x.volumenProducto)
                                              )));
-                            FileStream xmlFile = File.OpenWrite(@"mercancias.xml");
+                            FileStream xmlFile = File.OpenWrite(@"/Flota/python/mercancias.xml");
                             byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
                             xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
                             xmlFile.Close();
@@ -127,7 +127,7 @@ namespace App.SQL
                                              new XElement("volumenGasolina", x.volumenGasolina),
                                              new XElement("estado", x.estado)
                                              )));
-                            FileStream xmlFile = File.OpenWrite(@"vehiculos.xml");
+                            FileStream xmlFile = File.OpenWrite(@"/Flota/python/vehiculos.xml");
                             byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
                             xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
                             xmlFile.Close();
@@ -164,7 +164,7 @@ namespace App.SQL
                                              new XElement("id_vehiculo", x.id_vehiculo),
                                              new XElement("id_ruta", x.id_ruta)
                                              )));
-                            FileStream xmlFile = File.OpenWrite(@"GestionRuta.xml");
+                            FileStream xmlFile = File.OpenWrite(@"/Flota/python/GestionRuta.xml");
                             byte[] xmlBytes = Encoding.UTF8.GetBytes(DBtoXML.ToString());
                             xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
                             xmlFile.Close();
@@ -232,7 +232,7 @@ namespace App.SQL
             {
                 case 1:
                     //Importacion de datos de XML Conductor
-                    XDocument xDoc = XDocument.Load(@"conductores.xml");
+                    XDocument xDoc = XDocument.Load(@"/Flota/python/conductores.xml");
                     try
                     {
 
@@ -281,7 +281,7 @@ namespace App.SQL
                     break;
                 case 2:
                     //Importacion de datos de XML Mercancia
-                    XDocument xDocM = XDocument.Load(@"mercancias.xml");
+                    XDocument xDocM = XDocument.Load(@"/Flota/python/mercancias.xml");
                     try
                     {
 
@@ -324,7 +324,7 @@ namespace App.SQL
                     break;
                 case 3:
                     //Importar Vehiculos
-                    XDocument xDocV = XDocument.Load(@"vehiculos.xml");
+                    XDocument xDocV = XDocument.Load(@"/Flota/python/vehiculos.xml");
                     try
                     {
                         List<Vehiculo> vehiculos = xDocV.Descendants("Vehiculo").Select
@@ -373,7 +373,7 @@ namespace App.SQL
                     break;
                 case 4:
                     //Importar Vehiculos
-                    XDocument xDocP = XDocument.Load(@"GestionRuta.xml");
+                    XDocument xDocP = XDocument.Load(@"/Flota/python/GestionRuta.xml");
                     try
                     {
                         List<GestionRuta> Grutas = xDocP.Descendants("GestionRuta").Select
